@@ -176,6 +176,28 @@ private fun getQualityScore(format: Format): Int {
     return fileSize.toInt()
 }
 
+/**
+ * Returns true if [videoInfo] comes from a platform that natively separates video-only
+ * and audio-only streams (e.g. YouTube and Reddit). For these platforms the highest-quality
+ * video track has no audio and must be merged with a separate audio stream.
+ *
+ * All other platforms serve fully-muxed video+audio streams, so the default download
+ * should pick the best combined format directly — no merging required.
+ */
+private fun requiresStreamMerging(videoInfo: VideoInfo): Boolean {
+    val extractor = videoInfo.extractor?.lowercase() ?: ""
+    val extractorKey = videoInfo.extractorKey.lowercase()
+    val url = (videoInfo.webpageUrl ?: videoInfo.originalUrl ?: "").lowercase()
+    return extractor.contains("youtube") ||
+        extractorKey.contains("youtube") ||
+        extractor.contains("reddit") ||
+        extractorKey.contains("reddit") ||
+        url.contains("youtube.com") ||
+        url.contains("youtu.be") ||
+        url.contains("reddit.com") ||
+        url.contains("redd.it")
+}
+
 private data class FormatConfig(
     val formatList: List<Format>,
     val videoClips: List<VideoClip>,
@@ -210,12 +232,18 @@ fun FormatPage(
 
     var diffSubtitleLanguages by remember { mutableStateOf(emptySet<String>()) }
 
+    // Detect whether this site natively separates video and audio streams.
+    // Only YouTube and Reddit require stream merging; all other sites serve
+    // fully-muxed video+audio and should default to a direct combined download.
+    val siteSplitsStreams = requiresStreamMerging(videoInfo)
+
     FormatPageImpl(
         modifier = modifier,
         videoInfo = videoInfo,
         onNavigateBack = onNavigateBack,
         audioOnly = audioOnly,
         mergeAudioStream = !audioOnly && mergeAudioStream,
+        siteSplitsStreams = siteSplitsStreams,
         selectedSubtitleCodes = initialSelectedSubtitles,
         isClippingAvailable = VIDEO_CLIP.getBoolean() && (videoInfo.duration ?: .0) >= 0,
     ) { config ->
@@ -349,6 +377,14 @@ private fun FormatPageImpl(
     videoInfo: VideoInfo = VideoInfo(),
     audioOnly: Boolean = false,
     mergeAudioStream: Boolean = false,
+    /**
+     * When true (YouTube, Reddit), the best-quality video track is video-only and
+     * must be merged with a separate audio stream. When false, the site serves
+     * fully-muxed video+audio and the default selection should prefer a combined
+     * format — merging is only used as a last resort (e.g. when no combined format
+     * is available).
+     */
+    siteSplitsStreams: Boolean = true,
     isClippingAvailable: Boolean = false,
     selectedSubtitleCodes: Set<String>,
     onNavigateBack: () -> Unit = {},
@@ -533,33 +569,72 @@ private fun FormatPageImpl(
         mergedVideoFormats,
         videoOnlyFormats,
         audioOnlyFormats,
+        videoAudioFormats,
         bestAudioFormat,
         highestVideoFormat,
         audioOnly,
+        siteSplitsStreams,
     ) {
         derivedStateOf {
             mutableListOf<Format>().apply {
                 if (isSuggestedFormatSelected) {
-                    // Use highest format from allVideoFormats (merged format with audio)
-                    if (highestVideoFormat != null && !audioOnly) {
-                        // Check if it's a merged format
-                        val isMergedFormat = mergedVideoFormats.any { it.formatId == highestVideoFormat.formatId }
-                        
-                        if (isMergedFormat && bestAudioFormat != null) {
-                            // It's a merged format - add video-only + audio
-                            val originalVideoFormat = videoOnlyFormats.find { 
-                                it.formatId == highestVideoFormat.formatId 
-                            }
-                            if (originalVideoFormat != null) {
-                                add(originalVideoFormat)
-                                add(bestAudioFormat)
+                    if (!audioOnly) {
+                        if (siteSplitsStreams) {
+                            // ── YouTube / Reddit path ────────────────────────────────────────
+                            // These platforms serve high-quality video as a video-only stream.
+                            // We must merge the best video-only track with the best audio track.
+                            if (highestVideoFormat != null) {
+                                val isMergedFormat = mergedVideoFormats.any { it.formatId == highestVideoFormat.formatId }
+                                if (isMergedFormat && bestAudioFormat != null) {
+                                    val originalVideoFormat = videoOnlyFormats.find {
+                                        it.formatId == highestVideoFormat.formatId
+                                    }
+                                    if (originalVideoFormat != null) {
+                                        add(originalVideoFormat)
+                                        add(bestAudioFormat)
+                                    }
+                                } else {
+                                    add(highestVideoFormat)
+                                }
+                            } else {
+                                videoInfo.requestedFormats?.let { addAll(it) }
+                                    ?: videoInfo.requestedDownloads?.forEach {
+                                        it.requestedFormats?.let { addAll(it) }
+                                    }
                             }
                         } else {
-                            // It's an original combined format, add as-is
-                            add(highestVideoFormat)
+                            // ── All other sites path ─────────────────────────────────────────
+                            // These platforms already provide fully-muxed video+audio streams.
+                            // Prefer the best combined format; only fall back to merging when
+                            // no combined formats exist at all.
+                            val bestCombined = videoAudioFormats
+                                .maxByOrNull { getQualityScore(it) }
+                            if (bestCombined != null) {
+                                // Direct combined stream — no merging needed.
+                                add(bestCombined)
+                            } else if (highestVideoFormat != null) {
+                                // No combined formats available: fall back to merge.
+                                val isMergedFormat = mergedVideoFormats.any { it.formatId == highestVideoFormat.formatId }
+                                if (isMergedFormat && bestAudioFormat != null) {
+                                    val originalVideoFormat = videoOnlyFormats.find {
+                                        it.formatId == highestVideoFormat.formatId
+                                    }
+                                    if (originalVideoFormat != null) {
+                                        add(originalVideoFormat)
+                                        add(bestAudioFormat)
+                                    }
+                                } else {
+                                    add(highestVideoFormat)
+                                }
+                            } else {
+                                videoInfo.requestedFormats?.let { addAll(it) }
+                                    ?: videoInfo.requestedDownloads?.forEach {
+                                        it.requestedFormats?.let { addAll(it) }
+                                    }
+                            }
                         }
                     } else {
-                        // Fallback to original requested formats
+                        // Audio-only download: fall back to original requested formats.
                         videoInfo.requestedFormats?.let { addAll(it) }
                             ?: videoInfo.requestedDownloads?.forEach {
                                 it.requestedFormats?.let { addAll(it) }
