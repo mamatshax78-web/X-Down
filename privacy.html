@@ -1,268 +1,330 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Seal Plus - Privacy Policy</title>
+  <!-- ── Meta ─────────────────────────────────────────── -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>Privacy Policy — Seal Plus</title>
 
-<style>
+  <meta name="description"
+    content="Seal Plus Privacy Policy — Learn how Seal Plus handles your data. No personal data collection, no tracking, fully local processing." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://maheshtechnicals.github.io/Sealplus/privacy.html" />
 
-/* =====================
-   GLOBAL STYLES
-===================== */
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://maheshtechnicals.github.io/Sealplus/privacy.html" />
+  <meta property="og:title"       content="Privacy Policy — Seal Plus" />
+  <meta property="og:description" content="Seal Plus does not collect personal data. All downloads and processing occur locally on your device." />
+  <meta property="og:image"       content="https://raw.githubusercontent.com/MaheshTechnicals/Sealplus/main/fastlane/metadata/android/en-US/images/icon.png" />
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
+  <link rel="icon" type="image/png"
+    href="https://raw.githubusercontent.com/MaheshTechnicals/Sealplus/main/fastlane/metadata/android/en-US/images/icon.png" />
 
-body{
-background:linear-gradient(135deg,#05070f,#0b1225,#111c3a);
-color:#e6ecff;
-overflow-x:hidden;
-}
+  <!-- ── Fonts ─────────────────────────────────────────── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;600;700;800&display=swap"
+    rel="stylesheet" />
 
-/* Animated Background */
-body::before{
-content:"";
-position:fixed;
-width:300%;
-height:300%;
-background:radial-gradient(circle,#2b6cff33,transparent);
-animation:bgMove 18s linear infinite;
-z-index:-1;
-}
+  <!-- ── Shared Stylesheet ─────────────────────────────── -->
+  <link rel="stylesheet" href="site/assets/css/style.css" />
 
-@keyframes bgMove{
-0%{transform:translate(-20%,-20%)}
-50%{transform:translate(-10%,10%)}
-100%{transform:translate(-20%,-20%)}
-}
+  <!-- ── Privacy-page-specific styles ─────────────────── -->
+  <style>
+    /* Privacy hero */
+    .privacy-hero {
+      padding: 140px 5% 60px;
+      text-align: center;
+    }
+    .privacy-hero .section-tag { margin-bottom: 20px; }
+    .privacy-hero h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 900;
+      letter-spacing: -.5px;
+      margin-bottom: 12px;
+    }
+    .privacy-hero p {
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
 
-/* =====================
-   HEADER
-===================== */
+    /* Privacy content area */
+    .privacy-content {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 5% 80px;
+    }
 
-header{
-text-align:center;
-padding:60px 20px;
-}
+    .policy-card {
+      padding: 32px;
+      margin-bottom: 20px;
+    }
 
-header h1{
-font-size:2.8rem;
-background:linear-gradient(90deg,#4facfe,#00f2fe);
--webkit-background-clip:text;
-color:transparent;
-}
+    .policy-card h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--accent-blue);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
 
-header p{
-opacity:.8;
-margin-top:10px;
-}
+    .policy-card h2 .card-icon {
+      width: 34px; height: 34px;
+      border-radius: 9px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(79,172,254,.12);
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
 
-/* =====================
-   CONTAINER
-===================== */
+    .policy-card p, .policy-card li {
+      font-size: .95rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
 
-.container{
-max-width:1000px;
-margin:auto;
-padding:30px;
-}
+    .policy-card ul {
+      padding-left: 0;
+      margin-top: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
 
-/* CARD */
+    .policy-card li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
 
-.card{
-background:rgba(255,255,255,0.05);
-backdrop-filter:blur(20px);
-border-radius:18px;
-padding:35px;
-margin-bottom:25px;
-box-shadow:0 10px 40px rgba(0,0,0,.4);
-transition:.4s;
-opacity:0;
-transform:translateY(40px);
-}
+    .policy-card li::before {
+      content: '✓';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px; height: 20px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      background: rgba(0,230,118,.12);
+      color: var(--accent-green);
+      font-size: .72rem;
+      font-weight: 900;
+      margin-top: 2px;
+    }
 
-.card.show{
-opacity:1;
-transform:translateY(0);
-}
+    .policy-card a {
+      color: var(--accent-blue);
+      transition: color .3s;
+    }
+    .policy-card a:hover { color: var(--accent-cyan); }
 
-.card:hover{
-transform:translateY(-5px);
-}
+    /* Back button area */
+    .back-bar {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
 
-.card h2{
-margin-bottom:15px;
-color:#7fd8ff;
-}
-
-.card p{
-line-height:1.7;
-opacity:.9;
-}
-
-ul{
-margin-top:10px;
-padding-left:20px;
-}
-
-li{
-margin:8px 0;
-}
-
-/* =====================
-   FOOTER
-===================== */
-
-footer{
-text-align:center;
-padding:30px;
-opacity:.7;
-font-size:.9rem;
-}
-
-/* =====================
-   RESPONSIVE
-===================== */
-
-@media(max-width:768px){
-
-header h1{
-font-size:2rem;
-}
-
-.container{
-padding:15px;
-}
-
-.card{
-padding:22px;
-}
-
-}
-
-</style>
+    @media (max-width: 768px) {
+      .privacy-content { padding: 0 5% 60px; }
+      .policy-card { padding: 22px; }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-<h1>Seal Plus Privacy Policy</h1>
-<p>Last Updated: March 2026</p>
-</header>
+  <!-- ── Animated Background ──────────────────────────── -->
+  <div class="bg-canvas" aria-hidden="true">
+    <div class="bg-star"></div>
+  </div>
 
-<div class="container">
+  <!-- ── Navigation ───────────────────────────────────── -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="nav-brand" aria-label="Seal Plus home">
+      <img
+        src="https://raw.githubusercontent.com/MaheshTechnicals/Sealplus/main/fastlane/metadata/android/en-US/images/icon.png"
+        alt="Seal Plus app icon" width="38" height="38" loading="eager"
+      />
+      <span>Seal Plus</span>
+    </a>
 
-<div class="card">
-<h2>Introduction</h2>
-<p>
-Seal Plus respects your privacy and is committed to protecting user data.
-This Privacy Policy explains how the application handles information when
-you use Seal Plus.
-</p>
-</div>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#features">Features</a></li>
+      <li><a href="index.html#releases">Releases</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="privacy.html" class="active">Privacy</a></li>
+    </ul>
 
-<div class="card">
-<h2>Information Collection</h2>
-<p>
-Seal Plus does not collect personal information such as name, email,
-location, or identity data.
-</p>
+    <div class="nav-actions">
+      <a href="index.html#releases" class="btn-sponsor-nav" aria-label="Download Seal Plus">
+        ⬇️ Download
+      </a>
+      <button class="nav-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
 
-<ul>
-<li>No account registration required</li>
-<li>No personal data collection</li>
-<li>No tracking of user activity</li>
-</ul>
-</div>
+  <!-- ── Privacy Hero ─────────────────────────────────── -->
+  <header class="privacy-hero" role="banner">
+    <div class="section-tag reveal">Legal</div>
+    <h1 class="reveal delay-1">
+      <span class="grad-text">Privacy</span> Policy
+    </h1>
+    <p class="reveal delay-2">Last Updated: March 2026</p>
+  </header>
 
-<div class="card">
-<h2>How Seal Plus Works</h2>
-<p>
-Seal Plus processes media links locally on your device. Downloads and
-processing activities occur directly on your device without transferring
-personal data to external servers controlled by the developer.
-</p>
-</div>
+  <!-- ── Policy Content ───────────────────────────────── -->
+  <main class="privacy-content" role="main" aria-label="Privacy policy content">
 
-<div class="card">
-<h2>Permissions Usage</h2>
-<ul>
-<li>Storage Permission — Save downloaded media files</li>
-<li>Network Access — Download requested content</li>
-<li>Notification Permission — Show download progress</li>
-</ul>
-</div>
+    <article class="glass-card policy-card reveal">
+      <h2><span class="card-icon" aria-hidden="true">👋</span> Introduction</h2>
+      <p>
+        Seal Plus respects your privacy and is committed to protecting user data.
+        This Privacy Policy explains how the application handles information when
+        you use Seal Plus.
+      </p>
+    </article>
 
-<div class="card">
-<h2>Third-Party Services</h2>
-<p>
-Seal Plus may interact with external websites only when users provide
-links manually. The developer does not control third-party platform
-privacy policies.
-</p>
-</div>
+    <article class="glass-card policy-card reveal delay-1">
+      <h2><span class="card-icon" aria-hidden="true">🔒</span> Information Collection</h2>
+      <p>
+        Seal Plus does not collect personal information such as name, email,
+        location, or identity data.
+      </p>
+      <ul>
+        <li>No account registration required</li>
+        <li>No personal data collection</li>
+        <li>No tracking of user activity</li>
+      </ul>
+    </article>
 
-<div class="card">
-<h2>Data Security</h2>
-<p>
-All downloads and processing occur locally on the user's device.
-Seal Plus does not store user information on remote servers.
-</p>
-</div>
+    <article class="glass-card policy-card reveal delay-2">
+      <h2><span class="card-icon" aria-hidden="true">⚙️</span> How Seal Plus Works</h2>
+      <p>
+        Seal Plus processes media links locally on your device. Downloads and
+        processing activities occur directly on your device without transferring
+        personal data to external servers controlled by the developer.
+      </p>
+    </article>
 
-<div class="card">
-<h2>Children's Privacy</h2>
-<p>
-Seal Plus does not knowingly collect data from children under
-13 years of age.
-</p>
-</div>
+    <article class="glass-card policy-card reveal">
+      <h2><span class="card-icon" aria-hidden="true">📱</span> Permissions Usage</h2>
+      <ul>
+        <li>Storage Permission — Save downloaded media files to your device</li>
+        <li>Network Access — Download requested content from the internet</li>
+        <li>Notification Permission — Show download progress and completion alerts</li>
+      </ul>
+    </article>
 
-<div class="card">
-<h2>Policy Updates</h2>
-<p>
-This Privacy Policy may be updated periodically. Changes will
-be reflected on this page.
-</p>
-</div>
+    <article class="glass-card policy-card reveal delay-1">
+      <h2><span class="card-icon" aria-hidden="true">🌍</span> Third-Party Services</h2>
+      <p>
+        Seal Plus may interact with external websites only when users provide
+        links manually. The developer does not control third-party platform
+        privacy policies. Users are responsible for reviewing the privacy
+        practices of any third-party services they interact with.
+      </p>
+    </article>
 
-<div class="card">
-<h2>Contact</h2>
-<p>
-Developer: Mahesh Technicals<br>
-Email: help@maheshtechnicals.com<br>
-GitHub: https://github.com/MaheshTechnicals
-</p>
-</div>
+    <article class="glass-card policy-card reveal delay-2">
+      <h2><span class="card-icon" aria-hidden="true">🛡️</span> Data Security</h2>
+      <p>
+        All downloads and processing occur locally on the user's device.
+        Seal Plus does not store user information on remote servers.
+        No analytics, no crash reporting services, no telemetry.
+      </p>
+    </article>
 
-</div>
+    <article class="glass-card policy-card reveal">
+      <h2><span class="card-icon" aria-hidden="true">👧</span> Children's Privacy</h2>
+      <p>
+        Seal Plus does not knowingly collect data from children under
+        13 years of age. The application is designed for general use
+        without any age-specific data practices.
+      </p>
+    </article>
 
-<footer>
-© 2026 Seal Plus • Mahesh Technicals
-</footer>
+    <article class="glass-card policy-card reveal delay-1">
+      <h2><span class="card-icon" aria-hidden="true">🔄</span> Policy Updates</h2>
+      <p>
+        This Privacy Policy may be updated periodically to reflect changes
+        in the application or applicable regulations. Changes will be
+        reflected on this page with an updated date.
+      </p>
+    </article>
 
-<script>
+    <article class="glass-card policy-card reveal delay-2">
+      <h2><span class="card-icon" aria-hidden="true">✉️</span> Contact</h2>
+      <p>
+        If you have questions about this Privacy Policy, please reach out:
+      </p>
+      <ul>
+        <li>Developer: Mahesh Technicals</li>
+        <li>Email: <a href="mailto:help@maheshtechnicals.com">help@maheshtechnicals.com</a></li>
+        <li>GitHub: <a href="https://github.com/MaheshTechnicals" target="_blank" rel="noopener">github.com/MaheshTechnicals</a></li>
+      </ul>
+    </article>
 
-/* Smooth Scroll Animation */
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add("show");
-}
-});
-},{threshold:.15});
+    <div class="back-bar reveal">
+      <a href="index.html" class="btn btn-secondary" aria-label="Back to Seal Plus home">
+        ← Back to Home
+      </a>
+    </div>
 
-document.querySelectorAll(".card")
-.forEach(el=>observer.observe(el));
+  </main>
 
-</script>
+  <!-- ── Footer ───────────────────────────────────────── -->
+  <footer role="contentinfo" style="padding: 30px 5%; text-align: center; border-top: 1px solid var(--glass-border);">
+    <p style="font-size:.85rem; color:var(--text-muted);">
+      &copy; 2026
+      <a href="https://github.com/MaheshTechnicals" target="_blank" rel="noopener"
+         style="color:var(--accent-blue);">Mahesh Technicals</a>.
+      Seal Plus is licensed under
+      <a href="https://github.com/MaheshTechnicals/Sealplus/blob/main/LICENSE"
+         target="_blank" rel="noopener" style="color:var(--accent-blue);">GPL-3.0</a>.
+    </p>
+  </footer>
+
+  <!-- ── Scripts ──────────────────────────────────────── -->
+  <script>
+    /* Navbar scroll */
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+      navbar?.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    /* Mobile nav toggle */
+    const toggle = document.querySelector('.nav-toggle');
+    const links  = document.querySelector('.nav-links');
+    toggle?.addEventListener('click', () => {
+      toggle.classList.toggle('open');
+      links.classList.toggle('mobile-open');
+      toggle.setAttribute('aria-expanded',
+        toggle.classList.contains('open') ? 'true' : 'false');
+    });
+
+    /* Scroll-reveal */
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
 
 </body>
 </html>

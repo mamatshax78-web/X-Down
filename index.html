@@ -1,54 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- ── Meta Essentials ───────────────────────────────── -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <!-- Primary SEO -->
-  <title>Seal Plus – Advanced Video & Audio Downloader for Android</title>
-  <meta name="description" content="Seal Plus is a free, open-source Android app to download videos and audio from 1000+ platforms including YouTube, Instagram, TikTok, Twitter and more. Features gradient dark theme, aria2c speed boost, pause/resume, and auto-updates." />
-  <meta name="keywords" content="Seal Plus, Android downloader, video downloader, audio downloader, yt-dlp, YouTube downloader, Instagram downloader, TikTok downloader, aria2c, Mahesh Technicals, open source downloader" />
+  <title>Seal Plus — Premium Video &amp; Audio Downloader for Android</title>
+
+  <meta name="description"
+    content="Seal Plus is a powerful, premium video and audio downloader for Android. Download from 1000+ sites with exclusive gradient dark theme, auto-update, and advanced yt-dlp support. Built by Mahesh Technicals." />
+  <meta name="keywords"
+    content="Seal Plus, Android, video downloader, audio downloader, yt-dlp, Material Design 3, APK, Mahesh Technicals, Sealplus" />
   <meta name="author" content="Mahesh Technicals" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://maheshtechnicals.github.io/Sealplus/" />
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://maheshtechnicals.github.io/Sealplus/" />
-  <meta property="og:title" content="Seal Plus – Advanced Video & Audio Downloader for Android" />
-  <meta property="og:description" content="Download videos and audio from 1000+ sites. Powered by yt-dlp with aria2c speed boost, gradient dark theme, pause/resume, and seamless auto-updates." />
-  <meta property="og:image" content="https://raw.githubusercontent.com/MaheshTechnicals/Sealplus/main/fastlane/metadata/android/en-US/images/icon.png" />
-  <meta property="og:site_name" content="Seal Plus" />
+  <!-- ── Open Graph ────────────────────────────────────── -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://maheshtechnicals.github.io/Sealplus/" />
+  <meta property="og:title"       content="Seal Plus — Premium Video &amp; Audio Downloader for Android" />
+  <meta property="og:description" content="Download from 1000+ sites with Seal Plus. Premium glassmorphism UI, auto-update, aria2c support and yt-dlp. Free &amp; open source." />
+  <meta property="og:image"       content="https://raw.githubusercontent.com/MaheshTechnicals/Sealplus/main/fastlane/metadata/android/en-US/images/icon.png" />
+  <meta property="og:image:alt"   content="Seal Plus app icon" />
+  <meta property="og:site_name"   content="Seal Plus" />
+  <meta property="og:locale"      content="en_US" />
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content="https://maheshtechnicals.github.io/Sealplus/" />
-  <meta name="twitter:title" content="Seal Plus – Advanced Video & Audio Downloader for Android" />
-  <meta name="twitter:description" content="Download videos and audio from 1000+ sites. Powered by yt-dlp with aria2c speed boost, gradient dark theme, pause/resume." />
-  <meta name="twitter:image" content="https://raw.githubusercontent.com/MaheshTechnicals/Sealplus/main/fastlane/metadata/android/en-US/images/icon.png" />
+  <!-- ── Twitter Card ───────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:site"        content="@MaheshTechnical" />
+  <meta name="twitter:title"       content="Seal Plus — Premium Video &amp; Audio Downloader" />
+  <meta name="twitter:description" content="Download from 1000+ sites. Premium Android downloader with gradient dark theme &amp; Material Design 3." />
+  <meta name="twitter:image"       content="https://raw.githubusercontent.com/MaheshTechnicals/Sealplus/main/fastlane/metadata/android/en-US/images/icon.png" />
 
-  <!-- App meta -->
-  <meta name="application-name" content="Seal Plus" />
-  <meta name="theme-color" content="#0A0A14" />
-  <meta name="mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <meta name="apple-mobile-web-app-title" content="Seal Plus" />
+  <!-- ── Favicon ────────────────────────────────────────── -->
+  <link rel="icon" type="image/png"
+    href="https://raw.githubusercontent.com/MaheshTechnicals/Sealplus/main/fastlane/metadata/android/en-US/images/icon.png" />
+  <link rel="apple-touch-icon"
+    href="https://raw.githubusercontent.com/MaheshTechnicals/Sealplus/main/fastlane/metadata/android/en-US/images/icon.png" />
 
-  <!-- Structured Data (JSON-LD) -->
+  <!-- ── Fonts ──────────────────────────────────────────── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────── -->
+  <link rel="stylesheet" href="site/assets/css/style.css" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────── -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "Seal Plus",
-    "operatingSystem": "Android 7.0+",
-    "applicationCategory": "UtilitiesApplication",
-    "description": "Advanced video and audio downloader for Android powered by yt-dlp with aria2c, gradient dark theme, pause/resume and auto-updates.",
+    "operatingSystem": "Android",
+    "applicationCategory": "MultimediaApplication",
+    "description": "A powerful, premium video and audio downloader for Android built on yt-dlp. Features exclusive gradient dark theme, auto-updates, Material Design 3, and supports 1000+ sites.",
     "url": "https://maheshtechnicals.github.io/Sealplus/",
     "downloadUrl": "https://github.com/MaheshTechnicals/Sealplus/releases/latest",
-    "softwareVersion": "2.3.0",
-    "releaseNotes": "https://github.com/MaheshTechnicals/Sealplus/blob/main/CHANGELOG.md",
+    "screenshot": "https://raw.githubusercontent.com/MaheshTechnicals/Sealplus/main/fastlane/metadata/android/en-US/images/phoneScreenshots/1.jpg",
+    "image": "https://raw.githubusercontent.com/MaheshTechnicals/Sealplus/main/fastlane/metadata/android/en-US/images/icon.png",
+    "softwareVersion": "Latest",
     "author": {
       "@type": "Person",
       "name": "Mahesh Technicals",
@@ -58,682 +71,621 @@
       "@type": "Offer",
       "price": "0",
       "priceCurrency": "USD"
-    }
+    },
+    "keywords": "video downloader, audio downloader, yt-dlp, Android, APK, Seal Plus"
   }
   </script>
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/MaheshTechnicals/Sealplus/main/fastlane/metadata/android/en-US/images/icon.png" />
-  <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/MaheshTechnicals/Sealplus/main/fastlane/metadata/android/en-US/images/icon.png" />
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
-  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-  <!-- ===== NAVBAR ===== -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="#" class="nav-brand">
-        <img src="https://raw.githubusercontent.com/MaheshTechnicals/Sealplus/main/fastlane/metadata/android/en-US/images/icon.png" alt="Seal Plus Icon" class="nav-logo" />
-        <span class="nav-title">Seal <span class="gradient-text">Plus</span></span>
-      </a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#features">Features</a></li>
-        <li><a href="#screenshots">Screenshots</a></li>
-        <li><a href="#whats-new">What's New</a></li>
-        <li><a href="#download">Download</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="#community">Community</a></li>
-      </ul>
-      <a href="https://github.com/MaheshTechnicals/Sealplus/releases/latest" target="_blank" rel="noopener" class="btn btn-primary nav-cta">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-        Download
-      </a>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+  <!-- ── Animated Background ──────────────────────────────── -->
+  <div class="bg-canvas" aria-hidden="true">
+    <div class="bg-star"></div>
+  </div>
+
+  <!-- ── Toast Container ──────────────────────────────────── -->
+  <div class="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- ══════════════════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════════════════ -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <a href="#hero" class="nav-brand" aria-label="Seal Plus home">
+      <img
+        src="https://raw.githubusercontent.com/MaheshTechnicals/Sealplus/main/fastlane/metadata/android/en-US/images/icon.png"
+        alt="Seal Plus app icon"
+        width="38" height="38"
+        loading="eager"
+      />
+      <span>Seal Plus</span>
+    </a>
+
+    <ul class="nav-links" role="list">
+      <li><a href="#hero"         class="active">Home</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#screenshots">Screenshots</a></li>
+      <li><a href="#releases">Releases</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="btn-sponsor-nav" data-sponsor-modal aria-label="Support development">
+        ❤️ Sponsor
+      </button>
+      <button class="nav-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
-  <!-- ===== HERO ===== -->
-  <section class="hero" id="home">
-    <div class="hero-bg">
-      <div class="hero-orb orb-1"></div>
-      <div class="hero-orb orb-2"></div>
-      <div class="hero-orb orb-3"></div>
-      <div class="grid-overlay"></div>
-    </div>
-    <div class="container hero-content">
-      <div class="badge animate-fade-up">
-        <span class="badge-dot"></span>
-        v2.3.0 — Latest Release
-      </div>
-      <h1 class="hero-title animate-fade-up delay-1">
-        The Ultimate<br />
-        <span class="gradient-text">Video Downloader</span><br />
-        for Android
-      </h1>
-      <p class="hero-subtitle animate-fade-up delay-2">
-        Download videos & audio from <strong>1000+ platforms</strong> with lightning-fast aria2c,
-        a stunning gradient dark theme, pause/resume support, and seamless auto-updates.
-        Free. Open-source. No ads.
-      </p>
-      <div class="hero-actions animate-fade-up delay-3">
-        <a href="https://github.com/MaheshTechnicals/Sealplus/releases/latest" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-          Download APK
-        </a>
-        <a href="https://github.com/MaheshTechnicals/Sealplus" target="_blank" rel="noopener" class="btn btn-ghost btn-lg">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
-          View on GitHub
-        </a>
-      </div>
-      <div class="hero-stats animate-fade-up delay-4">
-        <div class="stat">
-          <div class="stat-row"><span class="stat-num" data-count="1000">0</span><span class="stat-suffix">+</span></div>
-          <span class="stat-label">Supported Sites</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <div class="stat-row"><span class="stat-num" data-count="32">0</span><span class="stat-suffix">x</span></div>
-          <span class="stat-label">Parallel Connections</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <div class="stat-row"><span class="stat-num" data-count="100">0</span><span class="stat-suffix">%</span></div>
-          <span class="stat-label">Free & Open Source</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <div class="stat-row"><span class="stat-num" data-count="24">0</span><span class="stat-suffix">+</span></div>
-          <span class="stat-label">Android API</span>
-        </div>
-      </div>
-    </div>
-    <div class="hero-phone-wrapper animate-fade-up delay-3">
-      <div class="phone-mockup">
-        <div class="phone-screen">
-          <img src="https://raw.githubusercontent.com/MaheshTechnicals/Sealplus/main/fastlane/metadata/android/en-US/images/phoneScreenshots/1.jpg" alt="Seal Plus App Screenshot" class="phone-screenshot" id="heroPhoneImg" />
-        </div>
-      </div>
-      <div class="phone-glow"></div>
-    </div>
-  </section>
+  <!-- ══════════════════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════════════════ -->
+  <section id="hero" aria-label="Hero section">
+    <div class="hero-inner">
 
-  <!-- ===== PLATFORMS MARQUEE ===== -->
-  <section class="platforms">
-    <div class="marquee-label">Download from</div>
-    <div class="marquee-track">
-      <div class="marquee-inner" id="marquee">
-        <span>YouTube</span><span>Instagram</span><span>TikTok</span><span>Twitter / X</span>
-        <span>Facebook</span><span>Reddit</span><span>Vimeo</span><span>Twitch</span>
-        <span>SoundCloud</span><span>Bandcamp</span><span>Dailymotion</span><span>Bilibili</span>
-        <span>Pinterest</span><span>Snapchat</span><span>LinkedIn</span><span>Dailymotion</span>
-        <!-- Duplicate for seamless loop -->
-        <span>YouTube</span><span>Instagram</span><span>TikTok</span><span>Twitter / X</span>
-        <span>Facebook</span><span>Reddit</span><span>Vimeo</span><span>Twitch</span>
-        <span>SoundCloud</span><span>Bandcamp</span><span>Dailymotion</span><span>Bilibili</span>
-        <span>Pinterest</span><span>Snapchat</span><span>LinkedIn</span><span>Dailymotion</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== FEATURES ===== -->
-  <section class="section features" id="features">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Features</span>
-        <h2 class="section-title">Everything You Need to <span class="gradient-text">Download Faster</span></h2>
-        <p class="section-subtitle">Packed with powerful features designed for the best download experience on Android.</p>
-      </div>
-      <div class="features-grid">
-
-        <div class="feature-card card-glow" data-aos>
-          <div class="feature-icon icon-purple">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-          </div>
-          <h3>Aria2c Speed Boost</h3>
-          <p>Up to 32x parallel connections for blazing-fast downloads. Configurable 2/4/8/16/32+ connection control in Seal Plus Extras.</p>
+      <!-- Content -->
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="dot" aria-hidden="true"></span>
+          Actively Maintained &amp; Open Source
         </div>
 
-        <div class="feature-card card-glow" data-aos>
-          <div class="feature-icon icon-blue">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-          </div>
-          <h3>Gradient Dark Theme</h3>
-          <p>Exclusive glassmorphism UI with deep OLED backgrounds and vibrant blue-purple gradients. Stunning on every screen.</p>
-        </div>
+        <h1 class="hero-title">
+          The Ultimate<br />
+          <em>Video &amp; Audio</em><br />
+          Downloader
+        </h1>
 
-        <div class="feature-card card-glow" data-aos>
-          <div class="feature-icon icon-cyan">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          </div>
-          <h3>1000+ Platforms</h3>
-          <p>Powered by yt-dlp. Download from YouTube, Instagram, TikTok, Twitter, Facebook, Vimeo, Reddit, and over 1000 other platforms.</p>
-        </div>
-
-        <div class="feature-card card-glow" data-aos>
-          <div class="feature-icon icon-green">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h1v6H9zM14 9h1v6h-1z"/></svg>
-          </div>
-          <h3>Pause & Resume</h3>
-          <p>Full download control with queue support. Pause any download and pick up exactly where you left off — even after app restart.</p>
-        </div>
-
-        <div class="feature-card card-glow" data-aos>
-          <div class="feature-icon icon-orange">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <h3>Auto-Update System</h3>
-          <p>Seamless in-app updates directly from GitHub releases. Always stay on the latest version with one-tap installation.</p>
-        </div>
-
-        <div class="feature-card card-glow" data-aos>
-          <div class="feature-icon icon-pink">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
-          </div>
-          <h3>Custom Commands</h3>
-          <p>Full yt-dlp CLI access with template management. Save and reuse custom commands for advanced power-user workflows.</p>
-        </div>
-
-        <div class="feature-card card-glow" data-aos>
-          <div class="feature-icon icon-purple">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-          </div>
-          <h3>Open Source</h3>
-          <p>100% open-source under GPL-3.0. No ads, no tracking, no data collection. Full transparency — review every line of code.</p>
-        </div>
-
-        <div class="feature-card card-glow" data-aos>
-          <div class="feature-icon icon-blue">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
-          </div>
-          <h3>Biometric Lock</h3>
-          <p>Protect the app with fingerprint or face unlock. PIN fallback ensures your downloads and settings stay private.</p>
-        </div>
-
-        <div class="feature-card card-glow" data-aos>
-          <div class="feature-icon icon-cyan">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"/><path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/><path d="M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z"/><path d="M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z"/><path d="M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z"/><path d="M15.5 19H14v1.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"/><path d="M10 9.5C10 8.67 9.33 8 8.5 8h-5C2.67 8 2 8.67 2 9.5S2.67 11 3.5 11h5c.83 0 1.5-.67 1.5-1.5z"/><path d="M8.5 5H10V3.5C10 2.67 9.33 2 8.5 2S7 2.67 7 3.5 7.67 5 8.5 5z"/></svg>
-          </div>
-          <h3>Smart Format Routing</h3>
-          <p>Platform-aware stream-merge logic. YouTube & Reddit use merge path; all other platforms pick the best combined format automatically.</p>
-        </div>
-
-        <div class="feature-card card-glow" data-aos>
-          <div class="feature-icon icon-green">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-          </div>
-          <h3>Download Metrics</h3>
-          <p>See real Average Speed (e.g. 3.2 MB/s) and Download Time (e.g. 2m 34s) for every download in the details dialog.</p>
-        </div>
-
-        <div class="feature-card card-glow" data-aos>
-          <div class="feature-icon icon-orange">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>
-          </div>
-          <h3>Concurrent Downloads</h3>
-          <p>Run up to 5 simultaneous downloads with smart queue management. Configure the limit from Seal Plus Extras settings.</p>
-        </div>
-
-        <div class="feature-card card-glow" data-aos>
-          <div class="feature-icon icon-pink">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="2"/><path d="M12 4a8 8 0 0 1 8 8 8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-          </div>
-          <h3>Advanced Proxy</h3>
-          <p>Built-in proxy support with auto-fetch, auto-test, and custom HTTP/HTTPS/SOCKS configuration. Bypass geo-restrictions with ease.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== WHAT'S NEW ===== -->
-  <section class="section whats-new" id="whats-new">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">v2.3.0 · March 3, 2026</span>
-        <h2 class="section-title">What's <span class="gradient-text">New</span></h2>
-        <p class="section-subtitle">Latest release brings smart downloads, connection-level speed control, and real metrics.</p>
-      </div>
-      <div class="changelog-grid">
-        <div class="changelog-card" data-aos>
-          <div class="cl-icon cl-settings">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93A10 10 0 0 0 4.93 19.07M12 2v2m0 16v2M4.93 4.93 6.34 6.34m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07 6.34 17.66"/></svg>
-          </div>
-          <div class="cl-content">
-            <h4>⚙️ Aria2c Connection Control</h4>
-            <p>New slider in Seal Plus Extras — choose 2, 4, 8, 16, or 32+ parallel connections to maximize your download speed.</p>
-          </div>
-        </div>
-        <div class="changelog-card" data-aos>
-          <div class="cl-icon cl-chart">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-          </div>
-          <div class="cl-content">
-            <h4>📊 Average Speed & Download Time</h4>
-            <p>Details dialog now shows computed average speed (e.g. 3.2 MB/s) and download duration (e.g. 2m 34s) for every file.</p>
-          </div>
-        </div>
-        <div class="changelog-card" data-aos>
-          <div class="cl-icon cl-rocket">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
-          </div>
-          <div class="cl-content">
-            <h4>🚀 Smart Stream-Merge Routing</h4>
-            <p>Only YouTube & Reddit use separate stream merging. All other platforms now pick the best combined format directly — faster and smarter.</p>
-          </div>
-        </div>
-        <div class="changelog-card" data-aos>
-          <div class="cl-icon cl-design">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
-          </div>
-          <div class="cl-content">
-            <h4>🎨 Clean Resolution Labels</h4>
-            <p>Format cards now show human-readable titles like "1080×1920" instead of raw yt-dlp format strings for a cleaner selection experience.</p>
-          </div>
-        </div>
-        <div class="changelog-card" data-aos>
-          <div class="cl-icon cl-drawer">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-          </div>
-          <div class="cl-content">
-            <h4>🖼️ Redesigned Detail Drawer</h4>
-            <p>Overhauled history drawer with 16:9 thumbnail card, source URL card with copy/open actions, and stats grid layout.</p>
-          </div>
-        </div>
-        <div class="changelog-card" data-aos>
-          <div class="cl-icon cl-sponsor">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </div>
-          <div class="cl-content">
-            <h4>💎 Sponsor Dialog Controls</h4>
-            <p>New schedule picker in Seal Plus Extras — set sponsor dialog frequency to Off, Weekly, or Monthly to suit your preference.</p>
-          </div>
-        </div>
-      </div>
-      <div class="changelog-cta">
-        <a href="https://github.com/MaheshTechnicals/Sealplus/blob/main/CHANGELOG.md" target="_blank" rel="noopener" class="btn btn-ghost">
-          View Full Changelog
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== SCREENSHOTS ===== -->
-  <section class="section screenshots" id="screenshots">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Screenshots</span>
-        <h2 class="section-title">See It In <span class="gradient-text">Action</span></h2>
-        <p class="section-subtitle">Beautiful gradient dark UI designed for the ultimate Android download experience.</p>
-      </div>
-    </div>
-    <div class="screenshots-carousel">
-      <div class="carousel-track" id="carouselTrack">
-        <div class="carousel-item">
-          <img src="https://raw.githubusercontent.com/MaheshTechnicals/Sealplus/main/fastlane/metadata/android/en-US/images/phoneScreenshots/1.jpg" alt="Seal Plus Home Screen" loading="lazy" />
-        </div>
-        <div class="carousel-item">
-          <img src="https://raw.githubusercontent.com/MaheshTechnicals/Sealplus/main/fastlane/metadata/android/en-US/images/phoneScreenshots/2.jpg" alt="Seal Plus Download Screen" loading="lazy" />
-        </div>
-        <div class="carousel-item">
-          <img src="https://raw.githubusercontent.com/MaheshTechnicals/Sealplus/main/fastlane/metadata/android/en-US/images/phoneScreenshots/3.jpg" alt="Seal Plus Settings" loading="lazy" />
-        </div>
-        <div class="carousel-item">
-          <img src="https://raw.githubusercontent.com/MaheshTechnicals/Sealplus/main/fastlane/metadata/android/en-US/images/phoneScreenshots/4.jpg" alt="Seal Plus Format Selection" loading="lazy" />
-        </div>
-        <div class="carousel-item">
-          <img src="https://raw.githubusercontent.com/MaheshTechnicals/Sealplus/main/fastlane/metadata/android/en-US/images/phoneScreenshots/5.jpg" alt="Seal Plus Download History" loading="lazy" />
-        </div>
-        <div class="carousel-item">
-          <img src="https://raw.githubusercontent.com/MaheshTechnicals/Sealplus/main/fastlane/metadata/android/en-US/images/phoneScreenshots/6.jpg" alt="Seal Plus Gradient Theme" loading="lazy" />
-        </div>
-        <div class="carousel-item">
-          <img src="https://raw.githubusercontent.com/MaheshTechnicals/Sealplus/main/fastlane/metadata/android/en-US/images/phoneScreenshots/7.jpg" alt="Seal Plus Details Dialog" loading="lazy" />
-        </div>
-        <div class="carousel-item">
-          <img src="https://raw.githubusercontent.com/MaheshTechnicals/Sealplus/main/fastlane/metadata/android/en-US/images/phoneScreenshots/8.jpg" alt="Seal Plus Custom Commands" loading="lazy" />
-        </div>
-        <div class="carousel-item">
-          <img src="https://raw.githubusercontent.com/MaheshTechnicals/Sealplus/main/fastlane/metadata/android/en-US/images/phoneScreenshots/9.jpg" alt="Seal Plus Seal Plus Extras" loading="lazy" />
-        </div>
-      </div>
-      <button class="carousel-btn carousel-prev" id="carouselPrev" aria-label="Previous">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
-      </button>
-      <button class="carousel-btn carousel-next" id="carouselNext" aria-label="Next">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-      </button>
-      <div class="carousel-dots" id="carouselDots"></div>
-    </div>
-    <!-- Lightbox -->
-    <div class="lightbox" id="lightbox">
-      <button class="lightbox-close" id="lightboxClose" aria-label="Close">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-      </button>
-      <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
-      </button>
-      <img src="" alt="Screenshot" id="lightboxImg" />
-      <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-      </button>
-    </div>
-  </section>
-
-  <!-- ===== DOWNLOAD ===== -->
-  <section class="section download" id="download">
-    <div class="download-bg">
-      <div class="download-orb"></div>
-    </div>
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Download</span>
-        <h2 class="section-title">Get Seal Plus <span class="gradient-text">v2.3.0</span></h2>
-        <p class="section-subtitle">Choose the right APK for your device. Not sure? Download Universal — it works everywhere.</p>
-      </div>
-      <div class="download-cards">
-        <a href="https://github.com/MaheshTechnicals/Sealplus/releases/latest" target="_blank" rel="noopener" class="download-card recommended">
-          <div class="rec-badge">Recommended</div>
-          <div class="dl-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12s1.5 3 4 3 4-3 4-3"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
-          </div>
-          <h4>Universal</h4>
-          <p>Works on all Android devices</p>
-          <span class="dl-tag">All devices</span>
-        </a>
-        <a href="https://github.com/MaheshTechnicals/Sealplus/releases/latest" target="_blank" rel="noopener" class="download-card">
-          <div class="dl-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
-          </div>
-          <h4>arm64-v8a</h4>
-          <p>64-bit ARM — most modern phones</p>
-          <span class="dl-tag">Most phones (2017+)</span>
-        </a>
-        <a href="https://github.com/MaheshTechnicals/Sealplus/releases/latest" target="_blank" rel="noopener" class="download-card">
-          <div class="dl-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
-          </div>
-          <h4>armeabi-v7a</h4>
-          <p>32-bit ARM — older phones</p>
-          <span class="dl-tag">Older devices</span>
-        </a>
-        <a href="https://github.com/MaheshTechnicals/Sealplus/releases/latest" target="_blank" rel="noopener" class="download-card">
-          <div class="dl-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
-          </div>
-          <h4>x86_64</h4>
-          <p>64-bit Intel/AMD devices</p>
-          <span class="dl-tag">Tablets / Emulators</span>
-        </a>
-        <a href="https://github.com/MaheshTechnicals/Sealplus/releases/latest" target="_blank" rel="noopener" class="download-card">
-          <div class="dl-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
-          </div>
-          <h4>x86</h4>
-          <p>32-bit Intel/AMD devices</p>
-          <span class="dl-tag">Older Intel</span>
-        </a>
-      </div>
-      <div class="install-steps">
-        <h3>How to Install</h3>
-        <div class="steps-grid">
-          <div class="step">
-            <div class="step-num">1</div>
-            <p>Download the APK for your device architecture</p>
-          </div>
-          <div class="step-arrow">→</div>
-          <div class="step">
-            <div class="step-num">2</div>
-            <p>Enable "Install from unknown sources" in Settings → Security</p>
-          </div>
-          <div class="step-arrow">→</div>
-          <div class="step">
-            <div class="step-num">3</div>
-            <p>Open the APK and follow installation prompts</p>
-          </div>
-          <div class="step-arrow">→</div>
-          <div class="step">
-            <div class="step-num">4</div>
-            <p>Grant permissions and enjoy seamless downloads!</p>
-          </div>
-        </div>
-        <p class="install-note">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          Always download from the <a href="https://github.com/MaheshTechnicals/Sealplus/releases" target="_blank" rel="noopener">official GitHub releases page</a> for security.
+        <p class="hero-desc">
+          Seal Plus brings premium glassmorphism UI, auto-update system,
+          and lightning-fast downloads to Android. Powered by yt-dlp — your
+          gateway to 1000+ sites.
         </p>
+
+        <div class="hero-buttons">
+          <a href="#releases"
+             class="btn btn-primary"
+             aria-label="Get Seal Plus APK">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            Download APK
+          </a>
+          <a href="https://github.com/MaheshTechnicals/Sealplus"
+             class="btn btn-secondary"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="View Seal Plus source on GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/>
+            </svg>
+            GitHub
+          </a>
+        </div>
+
+        <div class="hero-stats" aria-label="Application statistics">
+          <div class="stat-item">
+            <span class="stat-number" data-counter="1000" data-suffix="+">0+</span>
+            <span class="stat-label">Supported Sites</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-counter="24" data-suffix="+">0+</span>
+            <span class="stat-label">API Level</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-counter="100" data-suffix="%">0%</span>
+            <span class="stat-label">Free &amp; Open Source</span>
+          </div>
+        </div>
       </div>
+
+      <!-- Visual -->
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-mockup-wrap">
+          <div class="hero-glow-ring"></div>
+          <img
+            class="hero-app-icon"
+            src="https://raw.githubusercontent.com/MaheshTechnicals/Sealplus/main/fastlane/metadata/android/en-US/images/icon.png"
+            alt="Seal Plus app icon"
+            width="180" height="180"
+            loading="eager"
+          />
+          <div class="hero-float-badge badge-1">🎨 Gradient Dark Theme</div>
+          <div class="hero-float-badge badge-2">⚡ yt-dlp Powered</div>
+          <div class="hero-float-badge badge-3">✅ Auto-Update</div>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- ===== TECH SPECS ===== -->
-  <section class="section tech-specs">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Technical Details</span>
-        <h2 class="section-title">Built with <span class="gradient-text">Modern Stack</span></h2>
-      </div>
-      <div class="specs-grid">
-        <div class="spec-item" data-aos>
-          <span class="spec-label">Language</span>
-          <span class="spec-val">Kotlin 2.0.21</span>
-        </div>
-        <div class="spec-item" data-aos>
-          <span class="spec-label">UI Framework</span>
-          <span class="spec-val">Jetpack Compose 2025</span>
-        </div>
-        <div class="spec-item" data-aos>
-          <span class="spec-label">Architecture</span>
-          <span class="spec-val">MVVM + Clean</span>
-        </div>
-        <div class="spec-item" data-aos>
-          <span class="spec-label">Download Engine</span>
-          <span class="spec-val">yt-dlp + aria2c</span>
-        </div>
-        <div class="spec-item" data-aos>
-          <span class="spec-label">Min Android</span>
-          <span class="spec-val">7.0 (API 24)</span>
-        </div>
-        <div class="spec-item" data-aos>
-          <span class="spec-label">Target Android</span>
-          <span class="spec-val">Android 14 (API 36)</span>
-        </div>
-        <div class="spec-item" data-aos>
-          <span class="spec-label">Database</span>
-          <span class="spec-val">Room 2.8.4</span>
-        </div>
-        <div class="spec-item" data-aos>
-          <span class="spec-label">Networking</span>
-          <span class="spec-val">OkHttp 5.0</span>
-        </div>
-        <div class="spec-item" data-aos>
-          <span class="spec-label">Async</span>
-          <span class="spec-val">Kotlin Coroutines</span>
-        </div>
-        <div class="spec-item" data-aos>
-          <span class="spec-label">Build System</span>
-          <span class="spec-val">Gradle KTS 8.13</span>
-        </div>
-        <div class="spec-item" data-aos>
-          <span class="spec-label">License</span>
-          <span class="spec-val">GPL-3.0</span>
-        </div>
-        <div class="spec-item" data-aos>
-          <span class="spec-label">Current Version</span>
-          <span class="spec-val gradient-text">v2.3.0</span>
-        </div>
-      </div>
+  <!-- ══════════════════════════════════════════════════════
+       FEATURES
+  ═══════════════════════════════════════════════════════ -->
+  <section id="features" aria-label="Features">
+    <div class="section-header">
+      <div class="section-tag reveal">Why Seal Plus?</div>
+      <h2 class="section-title reveal delay-1">
+        Everything You Need,<br /><span class="grad-text">Nothing You Don't</span>
+      </h2>
+      <p class="section-sub reveal delay-2">
+        Built on the solid foundation of Seal with exclusive premium enhancements
+        and cutting-edge Android technologies.
+      </p>
+    </div>
+
+    <div class="features-grid">
+
+      <article class="glass-card feature-card reveal">
+        <div class="feature-icon purple" aria-hidden="true">🎨</div>
+        <h3 class="feature-title">Exclusive Gradient Dark Theme</h3>
+        <p class="feature-desc">
+          Premium glassmorphism UI with vibrant gradient accents. Material Design 3
+          implementation for a truly modern visual experience unique to Seal Plus.
+        </p>
+      </article>
+
+      <article class="glass-card feature-card reveal delay-1">
+        <div class="feature-icon blue" aria-hidden="true">⚡</div>
+        <h3 class="feature-title">Auto-Update System</h3>
+        <p class="feature-desc">
+          Seamless in-app updates directly from the release page. Never miss
+          a new version — update with a single tap without visiting GitHub.
+        </p>
+      </article>
+
+      <article class="glass-card feature-card reveal delay-2">
+        <div class="feature-icon cyan" aria-hidden="true">🌍</div>
+        <h3 class="feature-title">1000+ Supported Sites</h3>
+        <p class="feature-desc">
+          Powered by the latest yt-dlp engine, Seal Plus supports downloading
+          from YouTube, Vimeo, Twitter, TikTok, Reddit, and thousands more.
+        </p>
+      </article>
+
+      <article class="glass-card feature-card reveal delay-1">
+        <div class="feature-icon pink" aria-hidden="true">🚀</div>
+        <h3 class="feature-title">Performance Optimized</h3>
+        <p class="feature-desc">
+          Hardware-accelerated animations, ultra-fast downloads with speed
+          optimization, and advanced aria2c multi-threaded download support.
+        </p>
+      </article>
+
+      <article class="glass-card feature-card reveal delay-2">
+        <div class="feature-icon green" aria-hidden="true">💎</div>
+        <h3 class="feature-title">Modern Architecture</h3>
+        <p class="feature-desc">
+          Built with Android SDK 36, Kotlin 2.0, and Jetpack Compose.
+          Continuously maintained with the latest yt-dlp releases for
+          maximum compatibility.
+        </p>
+      </article>
+
+      <article class="glass-card feature-card reveal delay-3">
+        <div class="feature-icon orange" aria-hidden="true">🔒</div>
+        <h3 class="feature-title">Privacy First</h3>
+        <p class="feature-desc">
+          No account required. No personal data collected. All downloads and
+          processing happen locally on your device. Zero telemetry, 100%
+          transparent open-source code.
+        </p>
+      </article>
+
     </div>
   </section>
 
-  <!-- ===== FAQ ===== -->
-  <section class="section faq" id="faq">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">FAQ</span>
-        <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
-      </div>
-      <div class="faq-list">
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>Which APK should I download?</span>
-            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer">
-            <p>Download <strong>arm64-v8a</strong> for most modern phones (2017 and later). If you're unsure, the <strong>Universal APK</strong> works on every Android device. Choose x86_64 for tablets or emulators with Intel/AMD processors.</p>
+  <!-- ══════════════════════════════════════════════════════
+       SCREENSHOTS
+  ═══════════════════════════════════════════════════════ -->
+  <section id="screenshots" aria-label="App screenshots">
+    <div class="section-header">
+      <div class="section-tag reveal">Preview</div>
+      <h2 class="section-title reveal delay-1">
+        See It in <span class="grad-text">Action</span>
+      </h2>
+      <p class="section-sub reveal delay-2">
+        Explore the premium glassmorphism UI, gradient dark theme, and
+        powerful download features — all on your Android device.
+      </p>
+    </div>
+
+    <!-- Slider -->
+    <div class="ss-root reveal" role="region" aria-label="App screenshots slider">
+
+      <!-- Prev arrow -->
+      <button class="ss-arrow ss-prev" aria-label="Previous screenshot" onclick="ssSlider.prev()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+      </button>
+
+      <!-- Track wrapper -->
+      <div class="ss-viewport" aria-live="polite">
+        <div class="ss-track" id="ssTrack">
+
+          <div class="ss-slide" data-index="0">
+            <div class="ss-phone-frame">
+              <div class="ss-phone-screen">
+                <img src="https://raw.githubusercontent.com/MaheshTechnicals/Sealplus/main/fastlane/metadata/android/en-US/images/phoneScreenshots/1.jpg"
+                  alt="Seal Plus home screen — download manager" loading="lazy" />
+              </div>
+            </div>
+            <p class="ss-caption">Home &amp; Download</p>
           </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>How does auto-update work?</span>
-            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer">
-            <p>Seal Plus automatically checks GitHub releases when you open the app. When a new version is available, a notification appears with the changelog. Tap once to download and install — no manual visits to GitHub needed. You can disable this in Settings → About.</p>
+
+          <div class="ss-slide" data-index="1">
+            <div class="ss-phone-frame">
+              <div class="ss-phone-screen">
+                <img src="https://raw.githubusercontent.com/MaheshTechnicals/Sealplus/main/fastlane/metadata/android/en-US/images/phoneScreenshots/2.jpg"
+                  alt="Seal Plus gradient dark theme" loading="lazy" />
+              </div>
+            </div>
+            <p class="ss-caption">Gradient Dark Theme</p>
           </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>How do I enable the Gradient Dark Theme?</span>
-            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer">
-            <p>Go to <strong>Settings → Look & Feel</strong>, enable Dark Theme, then toggle the <strong>Gradient Dark</strong> switch. The theme activates immediately with vibrant blue-purple glassmorphism effects across the entire app.</p>
+
+          <div class="ss-slide" data-index="2">
+            <div class="ss-phone-frame">
+              <div class="ss-phone-screen">
+                <img src="https://raw.githubusercontent.com/MaheshTechnicals/Sealplus/main/fastlane/metadata/android/en-US/images/phoneScreenshots/3.jpg"
+                  alt="Seal Plus format selection" loading="lazy" />
+              </div>
+            </div>
+            <p class="ss-caption">Format Selection</p>
           </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>What sites can I download from?</span>
-            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer">
-            <p>Seal Plus supports <strong>1000+ platforms</strong> via yt-dlp — including YouTube, Instagram, TikTok, Twitter/X, Facebook, Reddit, Vimeo, Twitch, SoundCloud, Bandcamp, Bilibili, Dailymotion, and many more. <a href="https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md" target="_blank" rel="noopener">View the full list →</a></p>
+
+          <div class="ss-slide" data-index="3">
+            <div class="ss-phone-frame">
+              <div class="ss-phone-screen">
+                <img src="https://raw.githubusercontent.com/MaheshTechnicals/Sealplus/main/fastlane/metadata/android/en-US/images/phoneScreenshots/4.jpg"
+                  alt="Seal Plus download history" loading="lazy" />
+              </div>
+            </div>
+            <p class="ss-caption">Download History</p>
           </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>Is Seal Plus safe? Does it collect data?</span>
-            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer">
-            <p>Completely safe. Seal Plus is 100% open-source (GPL-3.0), contains <strong>no ads, no trackers, and no data collection</strong>. All processing happens locally on your device. You can inspect every line of code on GitHub.</p>
+
+          <div class="ss-slide" data-index="4">
+            <div class="ss-phone-frame">
+              <div class="ss-phone-screen">
+                <img src="https://raw.githubusercontent.com/MaheshTechnicals/Sealplus/main/fastlane/metadata/android/en-US/images/phoneScreenshots/5.jpg"
+                  alt="Seal Plus settings" loading="lazy" />
+              </div>
+            </div>
+            <p class="ss-caption">Settings</p>
           </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>What's the difference between Seal and Seal Plus?</span>
-            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer">
-            <p>Seal Plus is an enhanced fork of the original Seal app by JunkFood02, adding: <strong>exclusive Gradient Dark Theme</strong>, built-in auto-update system, advanced aria2c with configurable connections, download metrics (speed + time), smart format routing, and active maintenance by Mahesh Technicals.</p>
+
+          <div class="ss-slide" data-index="5">
+            <div class="ss-phone-frame">
+              <div class="ss-phone-screen">
+                <img src="https://raw.githubusercontent.com/MaheshTechnicals/Sealplus/main/fastlane/metadata/android/en-US/images/phoneScreenshots/6.jpg"
+                  alt="Seal Plus playlist download" loading="lazy" />
+              </div>
+            </div>
+            <p class="ss-caption">Playlist Download</p>
           </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>What should I do if a download fails?</span>
-            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer">
-            <p>Try these steps: (1) Update yt-dlp via Settings → About → Update yt-dlp. (2) Check your internet connection. (3) Use the <strong>Retry button</strong> on the failed download card. (4) For geo-restricted content, configure a proxy in Settings → Network. (5) Report persistent issues on <a href="https://github.com/MaheshTechnicals/Sealplus/issues" target="_blank" rel="noopener">GitHub Issues</a>.</p>
+
+          <div class="ss-slide" data-index="6">
+            <div class="ss-phone-frame">
+              <div class="ss-phone-screen">
+                <img src="https://raw.githubusercontent.com/MaheshTechnicals/Sealplus/main/fastlane/metadata/android/en-US/images/phoneScreenshots/7.jpg"
+                  alt="Seal Plus audio extraction" loading="lazy" />
+              </div>
+            </div>
+            <p class="ss-caption">Audio Extraction</p>
           </div>
-        </div>
-      </div>
+
+          <div class="ss-slide" data-index="7">
+            <div class="ss-phone-frame">
+              <div class="ss-phone-screen">
+                <img src="https://raw.githubusercontent.com/MaheshTechnicals/Sealplus/main/fastlane/metadata/android/en-US/images/phoneScreenshots/8.jpg"
+                  alt="Seal Plus download progress" loading="lazy" />
+              </div>
+            </div>
+            <p class="ss-caption">Live Progress</p>
+          </div>
+
+          <div class="ss-slide" data-index="8">
+            <div class="ss-phone-frame">
+              <div class="ss-phone-screen">
+                <img src="https://raw.githubusercontent.com/MaheshTechnicals/Sealplus/main/fastlane/metadata/android/en-US/images/phoneScreenshots/9.jpg"
+                  alt="Seal Plus custom commands" loading="lazy" />
+              </div>
+            </div>
+            <p class="ss-caption">Custom Commands</p>
+          </div>
+
+        </div><!-- /ss-track -->
+      </div><!-- /ss-viewport -->
+
+      <!-- Next arrow -->
+      <button class="ss-arrow ss-next" aria-label="Next screenshot" onclick="ssSlider.next()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6"/>
+        </svg>
+      </button>
+
+      <!-- Dots -->
+      <div class="ss-dots" role="tablist" aria-label="Go to screenshot" id="ssDots"></div>
+
+    </div><!-- /ss-root -->
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       RELEASES
+  ═══════════════════════════════════════════════════════ -->
+  <section id="releases" aria-label="Application releases">
+    <div class="section-header">
+      <div class="section-tag reveal">Downloads</div>
+      <h2 class="section-title reveal delay-1">
+        Latest <span class="grad-text">Releases</span>
+      </h2>
+      <p class="section-sub reveal delay-2">
+        All releases fetched live from GitHub. Download the universal APK
+        or pick your device's architecture for a smaller install size.
+      </p>
+    </div>
+
+    <div class="releases-controls reveal">
+      <p class="releases-info">Loading releases&hellip;</p>
+      <button class="btn-refresh" aria-label="Refresh releases list">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+          <polyline points="23 4 23 10 17 10"/>
+          <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
+        </svg>
+        Refresh
+      </button>
+    </div>
+
+    <div class="releases-list" aria-live="polite" aria-label="Releases list">
+      <!-- Dynamically populated by main.js -->
     </div>
   </section>
 
-  <!-- ===== COMMUNITY ===== -->
-  <section class="section community" id="community">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Community</span>
-        <h2 class="section-title">Join the <span class="gradient-text">Community</span></h2>
-        <p class="section-subtitle">Connect with thousands of users and stay updated with the latest news.</p>
+  <!-- ══════════════════════════════════════════════════════
+       ABOUT
+  ═══════════════════════════════════════════════════════ -->
+  <section id="about" aria-label="About Seal Plus">
+    <div class="about-inner">
+
+      <div class="about-content">
+        <div class="section-tag reveal">About</div>
+        <h2 class="section-title reveal delay-1">
+          Built with <span class="grad-text">Passion</span><br />
+          for Power Users
+        </h2>
+        <p class="section-sub reveal delay-2">
+          Seal Plus is maintained by Mahesh Technicals, building on the
+          excellent foundation of Seal by JunkFood02 with exclusive premium
+          features not found anywhere else.
+        </p>
+
+        <ul class="about-list reveal delay-2">
+          <li>Premium gradient glassmorphism UI — exclusive to Seal Plus</li>
+          <li>Actively maintained with frequent updates and yt-dlp upgrades</li>
+          <li>Supports Android API 24 (Nougat) and higher</li>
+          <li>Multiple architecture APKs for minimal install size</li>
+          <li>Full multi-language support across 15+ languages</li>
+          <li>100% free, open source under GPL-3.0 license</li>
+        </ul>
+
+        <div class="about-links reveal delay-3">
+          <a href="https://github.com/MaheshTechnicals/Sealplus"
+             class="btn btn-primary"
+             target="_blank" rel="noopener noreferrer">
+            View on GitHub
+          </a>
+          <button class="btn btn-secondary" data-sponsor-modal>
+            ❤️ Sponsor
+          </button>
+        </div>
       </div>
-      <div class="community-grid">
-        <a href="https://t.me/maheshtechnicals" target="_blank" rel="noopener" class="community-card telegram">
-          <div class="comm-icon">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.2-.04-.28-.02-.12.02-1.96 1.25-5.54 3.65-.52.36-1 .53-1.42.52-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.25.38-.51 1.07-.78 4.19-1.82 6.98-3.02 8.38-3.61 3.99-1.66 4.82-1.95 5.36-1.96.12 0 .38.03.55.18.14.12.18.29.2.46-.02.14-.02.3-.04.42z"/></svg>
+
+      <div class="about-visual reveal-right delay-2" aria-hidden="true">
+        <div class="glass-card tech-chip">
+          <span class="chip-icon">🤖</span>
+          <div>
+            <div class="tech-chip-label">Android SDK 36</div>
+            <div class="tech-chip-desc">Targets latest Android</div>
           </div>
-          <div class="comm-content">
-            <h4>Telegram Channel</h4>
-            <p>Latest updates, announcements, and quick support</p>
-            <span class="comm-link">@maheshtechnicals →</span>
+        </div>
+        <div class="glass-card tech-chip">
+          <span class="chip-icon">⚙️</span>
+          <div>
+            <div class="tech-chip-label">Kotlin 2.0</div>
+            <div class="tech-chip-desc">Modern language features</div>
           </div>
-        </a>
-        <a href="https://youtube.com/@maheshtechnicals" target="_blank" rel="noopener" class="community-card youtube">
-          <div class="comm-icon">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 0-3.77-2.7C14.78 4 12 4 12 4s-2.78 0-3.82.09a4.83 4.83 0 0 0-3.77 2.7A47.31 47.31 0 0 0 4 12a47.31 47.31 0 0 0 .41 5.31 4.83 4.83 0 0 0 3.77 2.7C9.22 20 12 20 12 20s2.78 0 3.82-.09a4.83 4.83 0 0 0 3.77-2.7A47.31 47.31 0 0 0 20 12a47.31 47.31 0 0 0-.41-5.31zM10 15V9l5 3-5 3z"/></svg>
+        </div>
+        <div class="glass-card tech-chip">
+          <span class="chip-icon">🎨</span>
+          <div>
+            <div class="tech-chip-label">Jetpack Compose</div>
+            <div class="tech-chip-desc">Declarative, reactive UI</div>
           </div>
-          <div class="comm-content">
-            <h4>YouTube Channel</h4>
-            <p>Tutorials, feature demos, and update previews</p>
-            <span class="comm-link">@maheshtechnicals →</span>
+        </div>
+        <div class="glass-card tech-chip">
+          <span class="chip-icon">📥</span>
+          <div>
+            <div class="tech-chip-label">yt-dlp</div>
+            <div class="tech-chip-desc">1000+ site support</div>
           </div>
-        </a>
-        <a href="https://github.com/MaheshTechnicals/Sealplus" target="_blank" rel="noopener" class="community-card github">
-          <div class="comm-icon">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
+        </div>
+        <div class="glass-card tech-chip">
+          <span class="chip-icon">🚀</span>
+          <div>
+            <div class="tech-chip-label">aria2c</div>
+            <div class="tech-chip-desc">Multi-thread downloads</div>
           </div>
-          <div class="comm-content">
-            <h4>GitHub Repository</h4>
-            <p>Source code, issues, and contributions welcome</p>
-            <span class="comm-link">MaheshTechnicals/Sealplus →</span>
+        </div>
+        <div class="glass-card tech-chip">
+          <span class="chip-icon">🔄</span>
+          <div>
+            <div class="tech-chip-label">Auto-Update</div>
+            <div class="tech-chip-desc">In-app release checks</div>
           </div>
-        </a>
+        </div>
+        <div class="glass-card tech-chip">
+          <span class="chip-icon">🌙</span>
+          <div>
+            <div class="tech-chip-label">Material Design 3</div>
+            <div class="tech-chip-desc">Dynamic theming &amp; Monet</div>
+          </div>
+        </div>
+        <div class="glass-card tech-chip">
+          <span class="chip-icon">🌍</span>
+          <div>
+            <div class="tech-chip-label">15+ Languages</div>
+            <div class="tech-chip-desc">Community localized</div>
+          </div>
+        </div>
       </div>
+
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="footer">
-    <div class="footer-glow"></div>
-    <div class="container footer-inner">
+  <!-- ══════════════════════════════════════════════════════
+       SPONSOR STRIP
+  ═══════════════════════════════════════════════════════ -->
+  <section id="sponsor-strip" aria-label="Sponsors">
+    <p class="sponsor-strip-title reveal">
+      <span>Thank you</span> to our amazing sponsors who make this possible ❤️
+    </p>
+    <div class="sponsors-ticker reveal delay-1" aria-label="Sponsor list">
+      <div class="sponsor-pill"><span class="heart" aria-hidden="true">❤️</span> Abdul Kadar K</div>
+      <div class="sponsor-pill"><span class="heart" aria-hidden="true">❤️</span> Peter Ciomer</div>
+      <div class="sponsor-pill"><span class="heart" aria-hidden="true">❤️</span> Rami Maunula</div>
+    </div>
+    <div class="reveal delay-2">
+      <button class="btn btn-primary" data-sponsor-modal aria-label="Support Seal Plus development">
+        ❤️ Become a Sponsor
+      </button>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════════════ -->
+  <footer role="contentinfo">
+    <div class="footer-inner">
+
       <div class="footer-brand">
-        <img src="https://raw.githubusercontent.com/MaheshTechnicals/Sealplus/main/fastlane/metadata/android/en-US/images/icon.png" alt="Seal Plus" class="footer-logo" />
-        <div>
-          <span class="footer-title">Seal <span class="gradient-text">Plus</span></span>
-          <span class="footer-version">v2.3.0</span>
+        <a href="#hero" class="nav-brand" aria-label="Back to top">
+          <img
+            src="https://raw.githubusercontent.com/MaheshTechnicals/Sealplus/main/fastlane/metadata/android/en-US/images/icon.png"
+            alt="Seal Plus icon" width="38" height="38" loading="lazy"
+          />
+          <span>Seal Plus</span>
+        </a>
+        <p>
+          A powerful, premium video &amp; audio downloader for Android.
+          Built with ❤️ by Mahesh Technicals.
+        </p>
+        <div class="footer-social" aria-label="Social links">
+          <a class="social-btn"
+             href="https://github.com/MaheshTechnicals/Sealplus"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="Seal Plus on GitHub" title="GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/>
+            </svg>
+          </a>
+          <a class="social-btn"
+             href="https://github.com/sponsors/MaheshTechnicals"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="Sponsor on GitHub" title="GitHub Sponsors">
+            ❤️
+          </a>
         </div>
       </div>
-      <p class="footer-desc">Advanced video &amp; audio downloader for Android. <br />Free, open-source, and built with ❤️ by Mahesh Technicals.</p>
-      <div class="footer-links">
-        <a href="https://github.com/MaheshTechnicals/Sealplus/releases/latest" target="_blank" rel="noopener">Download</a>
-        <a href="https://github.com/MaheshTechnicals/Sealplus/blob/main/CHANGELOG.md" target="_blank" rel="noopener">Changelog</a>
-        <a href="https://github.com/MaheshTechnicals/Sealplus/blob/main/privacy.html" target="_blank" rel="noopener">Privacy Policy</a>
-        <a href="https://github.com/MaheshTechnicals/Sealplus/blob/main/LICENSE" target="_blank" rel="noopener">GPL-3.0 License</a>
-        <a href="https://github.com/MaheshTechnicals/Sealplus/issues" target="_blank" rel="noopener">Report a Bug</a>
-        <a href="https://github.com/MaheshTechnicals/Sealplus/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">Contribute</a>
+
+      <div>
+        <p class="footer-col-title">App</p>
+        <ul class="footer-links" role="list">
+          <li><a href="#releases">Latest Release</a></li>
+          <li><a href="https://github.com/MaheshTechnicals/Sealplus/releases" target="_blank" rel="noopener">All Releases</a></li>
+          <li><a href="https://github.com/MaheshTechnicals/Sealplus/blob/main/CHANGELOG.md" target="_blank" rel="noopener">Changelog</a></li>
+          <li><a href="https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md" target="_blank" rel="noopener">Supported Sites</a></li>
+        </ul>
       </div>
-      <div class="footer-socials">
-        <a href="https://github.com/MaheshTechnicals/Sealplus" target="_blank" rel="noopener" aria-label="GitHub">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
-        </a>
-        <a href="https://t.me/maheshtechnicals" target="_blank" rel="noopener" aria-label="Telegram">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.2-.04-.28-.02-.12.02-1.96 1.25-5.54 3.65-.52.36-1 .53-1.42.52-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.25.38-.51 1.07-.78 4.19-1.82 6.98-3.02 8.38-3.61 3.99-1.66 4.82-1.95 5.36-1.96.12 0 .38.03.55.18.14.12.18.29.2.46-.02.14-.02.3-.04.42z"/></svg>
-        </a>
-        <a href="https://youtube.com/@maheshtechnicals" target="_blank" rel="noopener" aria-label="YouTube">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 0-3.77-2.7C14.78 4 12 4 12 4s-2.78 0-3.82.09a4.83 4.83 0 0 0-3.77 2.7A47.31 47.31 0 0 0 4 12a47.31 47.31 0 0 0 .41 5.31 4.83 4.83 0 0 0 3.77 2.7C9.22 20 12 20 12 20s2.78 0 3.82-.09a4.83 4.83 0 0 0 3.77-2.7A47.31 47.31 0 0 0 20 12a47.31 47.31 0 0 0-.41-5.31zM10 15V9l5 3-5 3z"/></svg>
-        </a>
+
+      <div>
+        <p class="footer-col-title">Community</p>
+        <ul class="footer-links" role="list">
+          <li><a href="https://github.com/MaheshTechnicals/Sealplus/issues" target="_blank" rel="noopener">Report Issue</a></li>
+          <li><a href="https://github.com/MaheshTechnicals/Sealplus/discussions" target="_blank" rel="noopener">Discussions</a></li>
+          <li><a href="https://github.com/MaheshTechnicals/Sealplus/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">Contributing</a></li>
+          <li><a href="https://github.com/sponsors/MaheshTechnicals" target="_blank" rel="noopener">Sponsors</a></li>
+        </ul>
       </div>
-      <div class="footer-bottom">
-        <p>© 2026 <a href="https://github.com/MaheshTechnicals" target="_blank" rel="noopener">Mahesh Technicals</a>. Released under <a href="https://github.com/MaheshTechnicals/Sealplus/blob/main/LICENSE" target="_blank" rel="noopener">GPL-3.0 License</a>.</p>
-        <p>Built on the foundation of <a href="https://github.com/JunkFood02/Seal" target="_blank" rel="noopener">Seal</a> by JunkFood02.</p>
+
+      <div>
+        <p class="footer-col-title">Legal</p>
+        <ul class="footer-links" role="list">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="https://github.com/MaheshTechnicals/Sealplus/blob/main/LICENSE" target="_blank" rel="noopener">GPL-3.0 License</a></li>
+          <li><a href="https://github.com/MaheshTechnicals/Sealplus/blob/main/CODE_OF_CONDUCT.md" target="_blank" rel="noopener">Code of Conduct</a></li>
+        </ul>
       </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>
+        &copy; 2026 <a href="https://github.com/MaheshTechnicals" target="_blank" rel="noopener">Mahesh Technicals</a>.
+        All rights reserved. Licensed under
+        <a href="https://github.com/MaheshTechnicals/Sealplus/blob/main/LICENSE" target="_blank" rel="noopener">GPL-3.0</a>.
+      </p>
+      <p>
+        Based on <a href="https://github.com/JunkFood02/Seal" target="_blank" rel="noopener">Seal</a>
+        by <a href="https://github.com/JunkFood02" target="_blank" rel="noopener">JunkFood02</a>.
+      </p>
     </div>
   </footer>
 
-  <!-- Back to top -->
-  <button class="back-to-top" id="backToTop" aria-label="Back to top">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
-  </button>
+  <!-- ══════════════════════════════════════════════════════
+       SPONSOR MODAL
+  ═══════════════════════════════════════════════════════ -->
+  <div class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-desc">
+    <div class="modal-box">
+      <button class="modal-close modal-close-x" aria-label="Close sponsor dialog">&times;</button>
 
-  <script src="script.js"></script>
+      <span class="modal-icon" aria-hidden="true">❤️</span>
+      <h2 class="modal-title" id="modal-title">Support Seal Plus</h2>
+      <p class="modal-desc" id="modal-desc">
+        Seal Plus is developed and maintained entirely for free. If you find
+        it useful, please consider supporting the project — your sponsorship
+        helps keep development active and the updates coming!
+      </p>
+
+      <div class="modal-sponsors" aria-label="Current sponsors">
+        <div class="sponsor-pill"><span class="heart" aria-hidden="true">❤️</span> Abdul Kadar K</div>
+        <div class="sponsor-pill"><span class="heart" aria-hidden="true">❤️</span> Peter Ciomer</div>
+        <div class="sponsor-pill"><span class="heart" aria-hidden="true">❤️</span> Rami Maunula</div>
+      </div>
+
+      <div class="modal-actions">
+        <a href="https://github.com/sponsors/MaheshTechnicals"
+           class="btn btn-primary"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Sponsor on GitHub Sponsors">
+          ❤️ Sponsor on GitHub
+        </a>
+        <button class="btn btn-secondary modal-close" aria-label="Maybe later">
+          Maybe Later
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Scripts ─────────────────────────────────────────── -->
+  <script src="site/assets/js/main.js" defer></script>
+
 </body>
 </html>
