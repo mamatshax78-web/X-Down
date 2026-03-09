@@ -1571,11 +1571,7 @@ fun DownloadDetailsDialog(
                         .fillMaxWidth()
                         .clickable {
                             clipboardManager.setText(AnnotatedString(state.viewState.url))
-                            android.widget.Toast.makeText(
-                                context,
-                                context.getString(R.string.link_copied),
-                                android.widget.Toast.LENGTH_SHORT
-                            ).show()
+                            context.makeToast(R.string.link_copied)
                         },
                     colors = CardDefaults.cardColors(
                         containerColor = MaterialTheme.colorScheme.secondaryContainer.copy(alpha = 0.5f)
@@ -1876,11 +1872,7 @@ fun RecentDownloadDetailsDialog(
                         .fillMaxWidth()
                         .clickable {
                             clipboardManager.setText(AnnotatedString(downloadInfo.videoUrl))
-                            android.widget.Toast.makeText(
-                                context,
-                                context.getString(R.string.link_copied),
-                                android.widget.Toast.LENGTH_SHORT
-                            ).show()
+                            context.makeToast(R.string.link_copied)
                         },
                     colors = CardDefaults.cardColors(
                         containerColor = MaterialTheme.colorScheme.secondaryContainer.copy(alpha = 0.5f)

@@ -1,8 +1,6 @@
 package com.junkfood.seal.util
 
 import android.content.Context
-import android.widget.Toast
-import androidx.annotation.MainThread
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
 import androidx.core.text.isDigitsOnly
@@ -10,19 +8,18 @@ import com.junkfood.seal.App
 import com.junkfood.seal.App.Companion.applicationScope
 import com.junkfood.seal.App.Companion.context
 import com.junkfood.seal.R
+import com.junkfood.seal.ui.common.ThemedToastManager
 import java.util.regex.Pattern
 import kotlin.math.roundToInt
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-@MainThread
 fun Context.makeToast(stringId: Int) {
-    Toast.makeText(applicationContext, getString(stringId), Toast.LENGTH_SHORT).show()
+    ThemedToastManager.showToast(this, stringId)
 }
 
-@MainThread
 fun Context.makeToast(message: String) {
-    Toast.makeText(applicationContext, message, Toast.LENGTH_SHORT).show()
+    ThemedToastManager.showToast(message)
 }
 
 private const val GIGA_BYTES = 1024f * 1024f * 1024f

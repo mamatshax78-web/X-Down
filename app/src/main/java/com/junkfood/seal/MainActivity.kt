@@ -15,6 +15,7 @@ import androidx.compose.ui.Modifier
 import com.junkfood.seal.App.Companion.context
 import com.junkfood.seal.ui.common.LocalDarkTheme
 import com.junkfood.seal.ui.common.SettingsProvider
+import com.junkfood.seal.ui.common.ThemedToastHost
 import com.junkfood.seal.ui.page.AppEntry
 import com.junkfood.seal.ui.page.downloadv2.configure.DownloadDialogViewModel
 import com.junkfood.seal.ui.page.onboarding.OnboardingScreen
@@ -99,6 +100,9 @@ class MainActivity : AppCompatActivity() {
                                     }
                                 }
                             }
+
+                            // Themed toast overlay – always on top
+                            ThemedToastHost()
                         }
                     }
                 }

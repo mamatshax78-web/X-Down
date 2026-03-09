@@ -20,6 +20,7 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.junkfood.seal.ui.common.LocalDarkTheme
 import com.junkfood.seal.ui.common.SettingsProvider
+import com.junkfood.seal.ui.common.ThemedToastHost
 import com.junkfood.seal.ui.page.downloadv2.configure.Config
 import com.junkfood.seal.ui.page.downloadv2.configure.DownloadDialog
 import com.junkfood.seal.ui.page.downloadv2.configure.DownloadDialogViewModel
@@ -162,6 +163,9 @@ class QuickDownloadActivity : ComponentActivity() {
                             )
                         }
                     }
+
+                    // Themed toast overlay for QuickDownloadActivity
+                    ThemedToastHost()
                 }
             }
         }
