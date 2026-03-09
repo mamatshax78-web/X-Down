@@ -152,6 +152,7 @@ fun TemplateListPage(onNavigateBack: () -> Unit, onNavigateToEditPage: (Int) -> 
                         Icon(
                             imageVector = Icons.Outlined.HelpOutline,
                             contentDescription = stringResource(id = R.string.how_does_it_work),
+                            tint = MaterialTheme.colorScheme.primary,
                         )
                     }
                     if (!isMultiSelectEnabled) {
@@ -160,6 +161,7 @@ fun TemplateListPage(onNavigateBack: () -> Unit, onNavigateToEditPage: (Int) -> 
                                 Icon(
                                     Icons.Outlined.MoreVert,
                                     contentDescription = stringResource(R.string.show_more_actions),
+                                    tint = MaterialTheme.colorScheme.primary,
                                 )
                             }
                             DropdownMenu(
@@ -167,7 +169,7 @@ fun TemplateListPage(onNavigateBack: () -> Unit, onNavigateToEditPage: (Int) -> 
                                 onDismissRequest = { expanded = false },
                             ) {
                                 DropdownMenuItem(
-                                    leadingIcon = { Icon(Icons.Outlined.ContentPasteGo, null) },
+                                    leadingIcon = { Icon(Icons.Outlined.ContentPasteGo, null, tint = MaterialTheme.colorScheme.secondary) },
                                     text = { Text(stringResource(R.string.export_to_clipboard)) },
                                     onClick = {
                                         scope.launch {
@@ -186,7 +188,7 @@ fun TemplateListPage(onNavigateBack: () -> Unit, onNavigateToEditPage: (Int) -> 
                                     },
                                 )
                                 DropdownMenuItem(
-                                    leadingIcon = { Icon(Icons.Outlined.AssignmentReturn, null) },
+                                    leadingIcon = { Icon(Icons.Outlined.AssignmentReturn, null, tint = MaterialTheme.colorScheme.secondary) },
                                     text = { Text(stringResource(R.string.import_from_clipboard)) },
                                     onClick = {
                                         scope.launch {
@@ -284,6 +286,7 @@ fun TemplateListPage(onNavigateBack: () -> Unit, onNavigateToEditPage: (Int) -> 
                                 imageVector = Icons.Outlined.ContentPasteGo,
                                 contentDescription =
                                     stringResource(id = R.string.export_to_clipboard),
+                                tint = MaterialTheme.colorScheme.secondary,
                             )
                         }
                         IconButton(
@@ -296,6 +299,7 @@ fun TemplateListPage(onNavigateBack: () -> Unit, onNavigateToEditPage: (Int) -> 
                             Icon(
                                 imageVector = Icons.Outlined.DeleteSweep,
                                 contentDescription = stringResource(id = R.string.remove),
+                                tint = MaterialTheme.colorScheme.tertiary,
                             )
                         }
                     }
@@ -362,7 +366,7 @@ fun TemplateListPage(onNavigateBack: () -> Unit, onNavigateToEditPage: (Int) -> 
     if (showDeleteDialog) {
         AlertDialog(
             onDismissRequest = { showDeleteDialog = false },
-            icon = { Icon(Icons.Outlined.Delete, null) },
+            icon = { Icon(Icons.Outlined.Delete, null, tint = MaterialTheme.colorScheme.tertiary) },
             title = { Text(stringResource(R.string.remove_template)) },
             text = {
                 Text(

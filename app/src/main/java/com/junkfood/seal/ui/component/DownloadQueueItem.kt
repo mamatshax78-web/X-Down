@@ -288,6 +288,7 @@ fun CustomCommandTaskItem(
                         Icon(
                             imageVector = Icons.Outlined.UnfoldMore,
                             contentDescription = stringResource(id = R.string.show_logs),
+                            tint = MaterialTheme.colorScheme.secondary,
                         )
                     }
                 }

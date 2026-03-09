@@ -308,6 +308,7 @@ fun VideoListPage(viewModel: VideoListViewModel = koinViewModel(), onNavigateBac
                                 Icon(
                                     imageVector = Icons.Outlined.Search,
                                     contentDescription = stringResource(R.string.search),
+                                    tint = MaterialTheme.colorScheme.primary,
                                 )
                             }
                         }
@@ -318,6 +319,7 @@ fun VideoListPage(viewModel: VideoListViewModel = koinViewModel(), onNavigateBac
                                     imageVector = Icons.Outlined.MoreVert,
                                     contentDescription =
                                         stringResource(id = R.string.show_more_actions),
+                                    tint = MaterialTheme.colorScheme.secondary,
                                 )
                             }
                             DropdownMenu(
@@ -331,6 +333,7 @@ fun VideoListPage(viewModel: VideoListViewModel = koinViewModel(), onNavigateBac
                                                 imageVector =
                                                     Icons.AutoMirrored.Outlined.DriveFileMove,
                                                 contentDescription = null,
+                                                tint = MaterialTheme.colorScheme.primary,
                                             )
                                         },
                                         text = {
@@ -347,6 +350,7 @@ fun VideoListPage(viewModel: VideoListViewModel = koinViewModel(), onNavigateBac
                                         Icon(
                                             imageVector = Icons.Outlined.Restore,
                                             contentDescription = null,
+                                            tint = MaterialTheme.colorScheme.secondary,
                                         )
                                     },
                                     text = {
@@ -409,6 +413,7 @@ fun VideoListPage(viewModel: VideoListViewModel = koinViewModel(), onNavigateBac
                         Icon(
                             imageVector = Icons.Outlined.DeleteSweep,
                             contentDescription = stringResource(id = R.string.remove),
+                            tint = MaterialTheme.colorScheme.tertiary,
                         )
                     }
                 }
@@ -545,7 +550,7 @@ fun VideoListPage(viewModel: VideoListViewModel = koinViewModel(), onNavigateBac
     if (showRemoveMultipleItemsDialog) {
         SealDialog(
             onDismissRequest = { showRemoveMultipleItemsDialog = false },
-            icon = { Icon(Icons.Outlined.DeleteSweep, null) },
+            icon = { Icon(Icons.Outlined.DeleteSweep, null, tint = MaterialTheme.colorScheme.tertiary) },
             title = { Text(stringResource(R.string.delete_info)) },
             text = {
                 Column {

@@ -246,6 +246,7 @@ private fun LanguagePageImpl(
                                     imageVector = Icons.AutoMirrored.Outlined.ArrowForwardIos,
                                     contentDescription = null,
                                     modifier = Modifier.padding(end = 16.dp).size(18.dp),
+                                    tint = MaterialTheme.colorScheme.primary,
                                 )
                             }
                         }

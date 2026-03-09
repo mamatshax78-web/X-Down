@@ -497,7 +497,7 @@ fun NewHomePage(
     if (showExitDialog) {
         AlertDialog(
             onDismissRequest = { showExitDialog = false },
-            icon = { Icon(Icons.Outlined.ExitToApp, contentDescription = null) },
+            icon = { Icon(Icons.Outlined.ExitToApp, contentDescription = null, tint = MaterialTheme.colorScheme.tertiary) },
             title = { Text(stringResource(R.string.exit_app_title)) },
             text = { Text(stringResource(R.string.exit_app_message)) },
             confirmButton = {
@@ -532,7 +532,8 @@ fun NewHomePage(
                     IconButton(onClick = onMenuOpen) {
                         Icon(
                             imageVector = Icons.Outlined.Menu,
-                            contentDescription = "Menu"
+                            contentDescription = "Menu",
+                            tint = MaterialTheme.colorScheme.primary
                         )
                     }
                 },
@@ -540,13 +541,15 @@ fun NewHomePage(
                     IconButton(onClick = onNavigateToSupport) {
                         Icon(
                             imageVector = Icons.Outlined.AttachMoney,
-                            contentDescription = "Support Developer"
+                            contentDescription = "Support Developer",
+                            tint = MaterialTheme.colorScheme.secondary
                         )
                     }
                     IconButton(onClick = onNavigateToDownloads) {
                         Icon(
                             imageVector = Icons.Outlined.FileDownload,
-                            contentDescription = stringResource(R.string.downloads_history)
+                            contentDescription = stringResource(R.string.downloads_history),
+                            tint = MaterialTheme.colorScheme.primary
                         )
                     }
                 },
@@ -821,7 +824,7 @@ fun URLInputField(
                         Icon(
                             imageVector = Icons.Outlined.ContentPaste,
                             contentDescription = "Paste",
-                            tint = MaterialTheme.colorScheme.onSurfaceVariant
+                            tint = MaterialTheme.colorScheme.primary
                         )
                     }
                 }
@@ -942,7 +945,8 @@ fun RecentDownloadCard(
                 IconButton(onClick = { showMenu = true }) {
                     Icon(
                         imageVector = Icons.Outlined.MoreVert,
-                        contentDescription = "More options"
+                        contentDescription = "More options",
+                        tint = MaterialTheme.colorScheme.secondary
                     )
                 }
                 
@@ -959,7 +963,8 @@ fun RecentDownloadCard(
                         leadingIcon = {
                             Icon(
                                 imageVector = Icons.Outlined.Info,
-                                contentDescription = null
+                                contentDescription = null,
+                                tint = MaterialTheme.colorScheme.secondary
                             )
                         }
                     )
@@ -972,7 +977,8 @@ fun RecentDownloadCard(
                         leadingIcon = {
                             Icon(
                                 imageVector = Icons.Outlined.Share,
-                                contentDescription = null
+                                contentDescription = null,
+                                tint = MaterialTheme.colorScheme.secondary
                             )
                         }
                     )
@@ -985,7 +991,8 @@ fun RecentDownloadCard(
                         leadingIcon = {
                             Icon(
                                 imageVector = Icons.Outlined.Link,
-                                contentDescription = null
+                                contentDescription = null,
+                                tint = MaterialTheme.colorScheme.tertiary
                             )
                         }
                     )
@@ -1150,7 +1157,7 @@ fun ActiveDownloadCard(
                     Icon(
                         imageVector = Icons.Outlined.VideoLibrary,
                         contentDescription = null,
-                        tint = MaterialTheme.colorScheme.onSurfaceVariant
+                        tint = MaterialTheme.colorScheme.primary
                     )
                 }
                 
@@ -1215,7 +1222,7 @@ fun ActiveDownloadCard(
                         Icon(
                             imageVector = Icons.Outlined.Pause,
                             contentDescription = stringResource(R.string.pause),
-                            tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                            tint = MaterialTheme.colorScheme.primary,
                             modifier = Modifier.size(20.dp)
                         )
                     }
@@ -1229,7 +1236,7 @@ fun ActiveDownloadCard(
                         Icon(
                             imageVector = Icons.Outlined.PlayArrow,
                             contentDescription = stringResource(R.string.resume),
-                            tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                            tint = MaterialTheme.colorScheme.primary,
                             modifier = Modifier.size(20.dp)
                         )
                     }
@@ -1240,7 +1247,8 @@ fun ActiveDownloadCard(
                     IconButton(onClick = { showMenu = true }) {
                         Icon(
                             imageVector = Icons.Outlined.MoreVert,
-                            contentDescription = "More options"
+                            contentDescription = "More options",
+                            tint = MaterialTheme.colorScheme.secondary
                         )
                     }
                     
@@ -1261,7 +1269,8 @@ fun ActiveDownloadCard(
                                 leadingIcon = {
                                     Icon(
                                         imageVector = Icons.Outlined.Pause,
-                                        contentDescription = null
+                                        contentDescription = null,
+                                        tint = MaterialTheme.colorScheme.primary
                                     )
                                 }
                             )
@@ -1278,7 +1287,8 @@ fun ActiveDownloadCard(
                                 leadingIcon = {
                                     Icon(
                                         imageVector = Icons.Outlined.PlayArrow,
-                                        contentDescription = null
+                                        contentDescription = null,
+                                        tint = MaterialTheme.colorScheme.primary
                                     )
                                 }
                             )
@@ -1295,7 +1305,8 @@ fun ActiveDownloadCard(
                                 leadingIcon = {
                                     Icon(
                                         imageVector = Icons.Outlined.PlayArrow,
-                                        contentDescription = null
+                                        contentDescription = null,
+                                        tint = MaterialTheme.colorScheme.primary
                                     )
                                 }
                             )
@@ -1314,7 +1325,8 @@ fun ActiveDownloadCard(
                                 leadingIcon = {
                                     Icon(
                                         imageVector = Icons.Outlined.Cancel,
-                                        contentDescription = null
+                                        contentDescription = null,
+                                        tint = MaterialTheme.colorScheme.tertiary
                                     )
                                 }
                             )
@@ -1330,7 +1342,8 @@ fun ActiveDownloadCard(
                             leadingIcon = {
                                 Icon(
                                     imageVector = Icons.Outlined.Link,
-                                    contentDescription = null
+                                    contentDescription = null,
+                                    tint = MaterialTheme.colorScheme.tertiary
                                 )
                             }
                         )
@@ -1346,7 +1359,8 @@ fun ActiveDownloadCard(
                                 leadingIcon = {
                                     Icon(
                                         imageVector = Icons.Outlined.Info,
-                                        contentDescription = null
+                                        contentDescription = null,
+                                        tint = MaterialTheme.colorScheme.secondary
                                     )
                                 }
                             )
@@ -1363,7 +1377,8 @@ fun ActiveDownloadCard(
                                 leadingIcon = {
                                     Icon(
                                         imageVector = Icons.Outlined.Delete,
-                                        contentDescription = null
+                                        contentDescription = null,
+                                        tint = MaterialTheme.colorScheme.tertiary
                                     )
                                 }
                             )

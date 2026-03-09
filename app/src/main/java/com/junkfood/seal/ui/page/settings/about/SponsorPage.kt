@@ -903,7 +903,7 @@ private fun LinkItem(modifier: Modifier = Modifier, icon: ImageVector, link: Str
             imageVector = icon,
             contentDescription = null,
             modifier = Modifier.padding(horizontal = 16.dp),
-            tint = MaterialTheme.colorScheme.onSurfaceVariant,
+            tint = MaterialTheme.colorScheme.primary,
         )
         Text(text = link, style = MaterialTheme.typography.titleSmall)
     }

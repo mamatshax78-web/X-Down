@@ -154,7 +154,7 @@ fun VideoFormatPreferenceSelectField(
             value = videoFormatText,
             onValueChange = {},
             readOnly = true,
-            leadingIcon = { Icon(Icons.Outlined.VideoFile, null) },
+            leadingIcon = { Icon(Icons.Outlined.VideoFile, null, tint = MaterialTheme.colorScheme.primary) },
             trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded) },
             colors = ExposedDropdownMenuDefaults.outlinedTextFieldColors(),
             label = { Text(stringResource(id = R.string.video_format_preference)) },
@@ -186,7 +186,7 @@ fun VideoQuickSettingsDialog(
 ) {
     SealDialog(
         onDismissRequest = onDismissRequest,
-        icon = { Icon(Icons.Outlined.VideoFile, null) },
+        icon = { Icon(Icons.Outlined.VideoFile, null, tint = MaterialTheme.colorScheme.primary) },
         title = { Text(text = stringResource(id = R.string.edit_preset)) },
         dismissButton = {
             OutlinedButton(onClick = onDismissRequest) { Text(stringResource(R.string.cancel)) }
@@ -390,7 +390,7 @@ fun AudioQuickSettingsDialog(
     SealDialog(
         modifier = modifier,
         onDismissRequest = onDismissRequest,
-        icon = { Icon(Icons.Outlined.AudioFile, null) },
+        icon = { Icon(Icons.Outlined.AudioFile, null, tint = MaterialTheme.colorScheme.primary) },
         title = { Text(stringResource(R.string.edit_preset)) },
         text = {
             AnimatedContent(
@@ -427,6 +427,7 @@ fun AudioQuickSettingsDialog(
                                         Icon(
                                             imageVector = Icons.Outlined.Settings,
                                             contentDescription = stringResource(R.string.edit),
+                                            tint = MaterialTheme.colorScheme.primary,
                                         )
                                     }
                                 }
@@ -484,7 +485,7 @@ fun AudioConversionDialog(
         dismissButton = {
             TextButton(onClick = onDismissRequest) { Text(stringResource(R.string.dismiss)) }
         },
-        icon = { Icon(Icons.Outlined.Sync, null) },
+        icon = { Icon(Icons.Outlined.Sync, null, tint = MaterialTheme.colorScheme.primary) },
         title = { Text(stringResource(R.string.convert_audio_format)) },
         confirmButton = {
             TextButton(
@@ -524,7 +525,7 @@ fun AudioConversionQuickSettingsDialog(onDismissRequest: () -> Unit, onConfirm: 
     SealDialog(
         onDismissRequest = onDismissRequest,
         dismissButton = { DismissButton { onDismissRequest() } },
-        icon = { Icon(Icons.Outlined.Sync, null) },
+        icon = { Icon(Icons.Outlined.Sync, null, tint = MaterialTheme.colorScheme.primary) },
         title = { Text(stringResource(R.string.convert_audio_format)) },
         confirmButton = {
             ConfirmButton {
@@ -574,7 +575,7 @@ fun VideoFormatDialog(
         dismissButton = {
             TextButton(onClick = onDismissRequest) { Text(stringResource(R.string.dismiss)) }
         },
-        icon = { Icon(Icons.Outlined.VideoFile, null) },
+        icon = { Icon(Icons.Outlined.VideoFile, null, tint = MaterialTheme.colorScheme.primary) },
         title = { Text(stringResource(R.string.video_format_preference)) },
         confirmButton = {
             TextButton(
@@ -615,7 +616,7 @@ fun AudioFormatDialog(onDismissRequest: () -> Unit) {
         dismissButton = {
             TextButton(onClick = onDismissRequest) { Text(stringResource(R.string.dismiss)) }
         },
-        icon = { Icon(Icons.Outlined.AudioFile, null) },
+        icon = { Icon(Icons.Outlined.AudioFile, null, tint = MaterialTheme.colorScheme.primary) },
         title = { Text(stringResource(R.string.audio_format_preference)) },
         confirmButton = {
             ConfirmButton {
@@ -649,7 +650,7 @@ fun AudioQualityDialog(onDismissRequest: () -> Unit) {
     SealDialog(
         onDismissRequest = onDismissRequest,
         dismissButton = { DismissButton { onDismissRequest() } },
-        icon = { Icon(Icons.Outlined.HighQuality, null) },
+        icon = { Icon(Icons.Outlined.HighQuality, null, tint = MaterialTheme.colorScheme.primary) },
         title = { Text(stringResource(R.string.audio_quality)) },
         confirmButton = {
             ConfirmButton {
@@ -691,7 +692,7 @@ fun FormatSortingDialog(
     SealDialog(
         onDismissRequest = onDismissRequest,
         dismissButton = { DismissButton { onDismissRequest() } },
-        icon = { Icon(Icons.AutoMirrored.Outlined.Sort, null) },
+        icon = { Icon(Icons.AutoMirrored.Outlined.Sort, null, tint = MaterialTheme.colorScheme.primary) },
         title = { Text(stringResource(R.string.format_sorting)) },
         confirmButton = {
             ConfirmButton(text = stringResource(id = R.string.save)) {
@@ -776,7 +777,7 @@ fun VideoQualityDialog(
         dismissButton = {
             TextButton(onClick = onDismissRequest) { Text(stringResource(R.string.dismiss)) }
         },
-        icon = { Icon(Icons.Outlined.HighQuality, null) },
+        icon = { Icon(Icons.Outlined.HighQuality, null, tint = MaterialTheme.colorScheme.primary) },
         title = { Text(stringResource(R.string.video_quality)) },
         confirmButton = {
             TextButton(
@@ -846,7 +847,7 @@ private fun SubtitleLanguageDialogImpl(
     SealDialog(
         onDismissRequest = onDismissRequest,
         title = { Text(stringResource(id = R.string.subtitle_language)) },
-        icon = { Icon(Icons.Outlined.Language, null) },
+        icon = { Icon(Icons.Outlined.Language, null, tint = MaterialTheme.colorScheme.primary) },
         text = {
             Column() {
                 Text(
@@ -912,7 +913,7 @@ fun SubtitleConversionDialog(onDismissRequest: () -> Unit) {
         },
         dismissButton = { DismissButton { onDismissRequest() } },
         title = { Text(text = stringResource(id = R.string.convert_subtitle)) },
-        icon = { Icon(imageVector = Icons.Outlined.Sync, contentDescription = null) },
+        icon = { Icon(imageVector = Icons.Outlined.Sync, contentDescription = null, tint = MaterialTheme.colorScheme.primary) },
         text = {
             LazyColumn {
                 item {

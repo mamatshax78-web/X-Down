@@ -356,7 +356,8 @@ private fun NumberPad(
                 Icon(
                     imageVector = Icons.Default.Backspace,
                     contentDescription = stringResource(R.string.backspace),
-                    modifier = Modifier.size(28.dp)
+                    modifier = Modifier.size(28.dp),
+                    tint = MaterialTheme.colorScheme.secondary
                 )
             }
         }

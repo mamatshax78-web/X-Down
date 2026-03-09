@@ -504,7 +504,7 @@ private fun SponsorFrequencyDialog(
 
     androidx.compose.material3.AlertDialog(
         onDismissRequest = onDismissRequest,
-        icon = { Icon(Icons.Outlined.VolunteerActivism, contentDescription = null) },
+        icon = { Icon(Icons.Outlined.VolunteerActivism, contentDescription = null, tint = MaterialTheme.colorScheme.primary) },
         title = { Text(stringResource(R.string.sponsor_dialog_frequency_title)) },
         text = {
             Column {

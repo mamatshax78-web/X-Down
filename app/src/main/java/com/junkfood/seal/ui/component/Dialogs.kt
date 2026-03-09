@@ -61,7 +61,7 @@ fun HelpDialog(
     AlertDialog(
         onDismissRequest = onDismissRequest,
         title = { Text(text = stringResource(id = R.string.how_does_it_work)) },
-        icon = { Icon(Icons.Outlined.HelpOutline, null) },
+        icon = { Icon(Icons.Outlined.HelpOutline, null, tint = MaterialTheme.colorScheme.primary) },
         text = { Text(text = text) },
         confirmButton = confirmButton,
         dismissButton = dismissButton,
@@ -198,6 +198,7 @@ private fun ButtonVariantPreview() {
                 Icon(
                     imageVector = Icons.Outlined.SignalCellularConnectedNoInternet4Bar,
                     contentDescription = null,
+                    tint = MaterialTheme.colorScheme.error,
                 )
             },
             title = {

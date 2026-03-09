@@ -47,7 +47,7 @@ fun SealSearchBar(
             Icon(
                 imageVector = Icons.Outlined.Search,
                 contentDescription = null,
-                tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                tint = MaterialTheme.colorScheme.primary,
             )
             SealAutoFocusTextField(
                 value = text,
@@ -67,7 +67,7 @@ fun SealSearchBar(
                                 modifier = Modifier.size(24.dp),
                                 imageVector = Icons.Outlined.Clear,
                                 contentDescription = stringResource(id = R.string.clear),
-                                tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                                tint = MaterialTheme.colorScheme.tertiary,
                             )
                         }
                     }

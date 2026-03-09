@@ -205,7 +205,7 @@ fun ProgressIndicatorButton(
                     strokeWidth = 3.dp,
                 )
             }
-        else Icon(imageVector = icon, contentDescription = null, modifier = Modifier.size(18.dp))
+        else Icon(imageVector = icon, contentDescription = null, modifier = Modifier.size(18.dp), tint = MaterialTheme.colorScheme.primary)
         Text(text = text, modifier = Modifier.padding(start = 8.dp))
     }
 }

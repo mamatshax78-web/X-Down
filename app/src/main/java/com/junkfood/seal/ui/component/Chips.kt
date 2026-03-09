@@ -189,7 +189,7 @@ fun ShortcutChip(
                     Icon(
                         imageVector = Icons.Outlined.Clear,
                         contentDescription = stringResource(id = R.string.remove),
-                        tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                        tint = MaterialTheme.colorScheme.tertiary,
                         modifier = Modifier.size(InputChipDefaults.IconSize),
                     )
                 }

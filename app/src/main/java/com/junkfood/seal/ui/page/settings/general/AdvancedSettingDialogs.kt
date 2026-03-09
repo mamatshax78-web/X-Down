@@ -58,7 +58,7 @@ fun SponsorBlockDialog(onDismissRequest: () -> Unit) {
 
     AlertDialog(
         onDismissRequest = onDismissRequest,
-        icon = { Icon(Icons.Outlined.MoneyOff, null) },
+        icon = { Icon(Icons.Outlined.MoneyOff, null, tint = MaterialTheme.colorScheme.primary) },
         title = { Text(stringResource(R.string.sponsorblock)) },
         text = {
             Column {

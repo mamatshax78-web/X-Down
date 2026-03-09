@@ -298,6 +298,7 @@ private fun ErrorPage(modifier: Modifier = Modifier, state: Error, onActionPost:
             imageVector = Icons.Outlined.ErrorOutline,
             contentDescription = null,
             modifier = Modifier.size(40.dp),
+            tint = MaterialTheme.colorScheme.error,
         )
         Text(
             text = stringResource(R.string.fetch_info_error_msg),
@@ -848,6 +849,7 @@ fun ExpandableTitle(
                     imageVector = if (expanded) Icons.Outlined.ExpandLess else Icons.Outlined.ExpandMore,
                     contentDescription = null,
                     modifier = Modifier.size(20.dp),
+                    tint = MaterialTheme.colorScheme.secondary,
                 )
                 Spacer(modifier = Modifier.width(32.dp))
             }
@@ -928,6 +930,7 @@ internal fun Header(modifier: Modifier = Modifier, icon: ImageVector, title: Str
             modifier = Modifier.align(Alignment.CenterHorizontally),
             imageVector = icon,
             contentDescription = null,
+            tint = MaterialTheme.colorScheme.primary,
         )
         Text(
             text = title,
@@ -1009,12 +1012,14 @@ private fun Preset(
                         imageVector = Icons.Filled.SettingsSuggest,
                         null,
                         modifier = Modifier.size(20.dp),
+                        tint = MaterialTheme.colorScheme.primary,
                     )
                 } else {
                     Icon(
                         imageVector = Icons.Outlined.SettingsSuggest,
                         null,
                         modifier = Modifier.size(20.dp),
+                        tint = MaterialTheme.colorScheme.primary,
                     )
                 }
             }
@@ -1027,6 +1032,7 @@ private fun Preset(
                         imageVector = Icons.Outlined.MoreVert,
                         contentDescription = stringResource(R.string.edit),
                         modifier = Modifier.size(20.dp),
+                        tint = MaterialTheme.colorScheme.secondary,
                     )
                 }
             }
@@ -1059,12 +1065,14 @@ private fun Custom(
                         imageVector = Icons.Filled.VideoFile,
                         null,
                         modifier = Modifier.size(20.dp),
+                        tint = MaterialTheme.colorScheme.primary,
                     )
                 } else {
                     Icon(
                         imageVector = Icons.Outlined.VideoFile,
                         null,
                         modifier = Modifier.size(20.dp),
+                        tint = MaterialTheme.colorScheme.primary,
                     )
                 }
             }
@@ -1092,6 +1100,7 @@ private fun ActionButton.Icon() {
             },
         contentDescription = null,
         modifier = Modifier.size(18.dp),
+        tint = MaterialTheme.colorScheme.primary,
     )
 }
 

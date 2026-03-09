@@ -330,7 +330,8 @@ private fun SetPinNumberPad(
                 Icon(
                     imageVector = Icons.Default.Backspace,
                     contentDescription = stringResource(R.string.backspace),
-                    modifier = Modifier.size(24.dp)
+                    modifier = Modifier.size(24.dp),
+                    tint = MaterialTheme.colorScheme.secondary
                 )
             }
         }

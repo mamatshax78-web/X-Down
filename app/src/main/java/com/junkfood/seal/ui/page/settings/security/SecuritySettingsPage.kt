@@ -62,7 +62,8 @@ fun SecuritySettingsPage(
                     IconButton(onClick = onBackPressed) {
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                            contentDescription = stringResource(R.string.back)
+                            contentDescription = stringResource(R.string.back),
+                            tint = MaterialTheme.colorScheme.primary
                         )
                     }
                 }
@@ -287,7 +288,7 @@ fun SecuritySettingsPage(
     if (showDisableSecurityDialog) {
         AlertDialog(
             onDismissRequest = { showDisableSecurityDialog = false },
-            icon = { Icon(Icons.Default.Warning, contentDescription = null) },
+            icon = { Icon(Icons.Default.Warning, contentDescription = null, tint = MaterialTheme.colorScheme.primary) },
             title = { Text(stringResource(R.string.disable_security)) },
             text = { Text(stringResource(R.string.disable_security_warning)) },
             confirmButton = {
@@ -315,7 +316,7 @@ fun SecuritySettingsPage(
     if (showResetAppLockDialog) {
         AlertDialog(
             onDismissRequest = { showResetAppLockDialog = false },
-            icon = { Icon(Icons.Default.RestartAlt, contentDescription = null) },
+            icon = { Icon(Icons.Default.RestartAlt, contentDescription = null, tint = MaterialTheme.colorScheme.primary) },
             title = { Text(stringResource(R.string.reset_app_lock)) },
             text = { Text(stringResource(R.string.reset_app_lock_warning)) },
             confirmButton = {
@@ -385,7 +386,7 @@ private fun VerifyOldPinDialog(
     
     AlertDialog(
         onDismissRequest = onDismiss,
-        icon = { Icon(Icons.Default.Lock, contentDescription = null) },
+        icon = { Icon(Icons.Default.Lock, contentDescription = null, tint = MaterialTheme.colorScheme.primary) },
         title = { Text(stringResource(R.string.verify_old_pin)) },
         text = {
             Column(
@@ -469,7 +470,8 @@ private fun VerifyOldPinDialog(
                                         Icon(
                                             imageVector = Icons.Default.Backspace,
                                             contentDescription = "Backspace",
-                                            modifier = Modifier.size(20.dp)
+                                            modifier = Modifier.size(20.dp),
+                                            tint = MaterialTheme.colorScheme.secondary
                                         )
                                     }
                                 } else {
@@ -511,7 +513,7 @@ private fun AuthTimeoutDialog(
     
     AlertDialog(
         onDismissRequest = onDismiss,
-        icon = { Icon(Icons.Default.Timer, contentDescription = null) },
+        icon = { Icon(Icons.Default.Timer, contentDescription = null, tint = MaterialTheme.colorScheme.primary) },
         title = { Text(stringResource(R.string.authentication_timeout)) },
         text = {
             Column {

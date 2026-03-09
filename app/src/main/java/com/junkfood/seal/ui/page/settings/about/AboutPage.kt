@@ -252,7 +252,7 @@ fun AutoUpdateUnavailableDialog(onDismissRequest: () -> Unit = {}) {
         confirmButton = {
             ConfirmButton(stringResource(id = R.string.got_it)) { onDismissRequest() }
         },
-        icon = { Icon(Icons.Outlined.UpdateDisabled, null) },
+        icon = { Icon(Icons.Outlined.UpdateDisabled, null, tint = MaterialTheme.colorScheme.primary) },
         title = {
             Text(
                 text = stringResource(id = R.string.feature_unavailable),

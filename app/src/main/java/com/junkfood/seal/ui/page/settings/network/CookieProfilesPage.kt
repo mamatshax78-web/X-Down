@@ -167,12 +167,14 @@ fun CookieProfilePage(
                         Icon(
                             imageVector = Icons.Outlined.HelpOutline,
                             contentDescription = stringResource(R.string.how_does_it_work),
+                            tint = MaterialTheme.colorScheme.primary,
                         )
                     }
                     IconButton(onClick = { expanded = true }) {
                         Icon(
                             Icons.Outlined.MoreVert,
                             contentDescription = stringResource(R.string.show_more_actions),
+                            tint = MaterialTheme.colorScheme.primary,
                         )
                     }
                     DropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
@@ -199,7 +201,7 @@ fun CookieProfilePage(
                             onClick = ::toggleUserAgent,
                         )
                         DropdownMenuItem(
-                            leadingIcon = { Icon(Icons.Outlined.FileCopy, null) },
+                            leadingIcon = { Icon(Icons.Outlined.FileCopy, null, tint = MaterialTheme.colorScheme.secondary) },
                             text = { Text(stringResource(id = R.string.export_to_file)) },
                             enabled = cookieList.isNotEmpty(),
                             onClick = {
@@ -210,7 +212,7 @@ fun CookieProfilePage(
                             },
                         )
                         DropdownMenuItem(
-                            leadingIcon = { Icon(Icons.Outlined.DeleteForever, null) },
+                            leadingIcon = { Icon(Icons.Outlined.DeleteForever, null, tint = MaterialTheme.colorScheme.tertiary) },
                             text = { Text(stringResource(id = R.string.clear_all_cookies)) },
                             onClick = {
                                 expanded = false
@@ -333,7 +335,7 @@ fun CookieGeneratorDialog(
     LaunchedEffect(Unit) { withContext(Dispatchers.IO) { CookieManager.getInstance().flush() } }
     AlertDialog(
         onDismissRequest = onDismissRequest,
-        icon = { Icon(Icons.Outlined.Cookie, null) },
+        icon = { Icon(Icons.Outlined.Cookie, null, tint = MaterialTheme.colorScheme.primary) },
         title = { Text(stringResource(R.string.cookies)) },
         text = {
             Column(Modifier.verticalScroll(rememberScrollState())) {
@@ -388,7 +390,7 @@ fun DeleteCookieDialog(cookiesViewModel: CookiesViewModel, onDismissRequest: () 
                 onDismissRequest()
             }
         },
-        icon = { Icon(Icons.Outlined.Delete, null) },
+        icon = { Icon(Icons.Outlined.Delete, null, tint = MaterialTheme.colorScheme.tertiary) },
     )
 }
 
@@ -410,7 +412,7 @@ fun ClearCookiesDialog(onDismissRequest: () -> Unit = {}, onConfirm: () -> Unit)
                 onDismissRequest()
             }
         },
-        icon = { Icon(Icons.Outlined.DeleteForever, null) },
+        icon = { Icon(Icons.Outlined.DeleteForever, null, tint = MaterialTheme.colorScheme.tertiary) },
     )
 }
 
@@ -433,7 +435,7 @@ fun CookiesQuickSettingsDialog(
                 onConfirm()
             }
         },
-        icon = { Icon(imageVector = Icons.Outlined.Cookie, contentDescription = null) },
+        icon = { Icon(imageVector = Icons.Outlined.Cookie, contentDescription = null, tint = MaterialTheme.colorScheme.primary) },
         title = {
             Text(text = stringResource(id = R.string.cookies), textAlign = TextAlign.Center)
         },

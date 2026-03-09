@@ -378,6 +378,7 @@ fun VideoDetailDrawerImpl(
                         Icon(
                             imageVector = Icons.Outlined.Delete,
                             contentDescription = null,
+                            tint = MaterialTheme.colorScheme.tertiary,
                             modifier = Modifier.size(18.dp),
                         )
                         Spacer(modifier = Modifier.width(6.dp))
@@ -403,6 +404,7 @@ fun VideoDetailDrawerImpl(
                             Icon(
                                 imageVector = Icons.Outlined.Share,
                                 contentDescription = null,
+                                tint = MaterialTheme.colorScheme.secondary,
                                 modifier = Modifier.size(18.dp),
                             )
                             Spacer(modifier = Modifier.width(8.dp))
@@ -427,6 +429,7 @@ fun VideoDetailDrawerImpl(
                             Icon(
                                 imageVector = Icons.Outlined.FileDownload,
                                 contentDescription = null,
+                                tint = MaterialTheme.colorScheme.secondary,
                                 modifier = Modifier.size(18.dp),
                             )
                             Spacer(modifier = Modifier.width(8.dp))

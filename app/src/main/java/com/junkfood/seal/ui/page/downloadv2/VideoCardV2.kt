@@ -441,7 +441,7 @@ fun ListItemStateText(
                     Icon(
                         imageVector = Icons.Outlined.Cancel,
                         contentDescription = null,
-                        tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                        tint = MaterialTheme.colorScheme.tertiary,
                         modifier = sizeModifier,
                     )
                 }

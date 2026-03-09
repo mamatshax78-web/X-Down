@@ -274,6 +274,7 @@ fun VideoClipDialog(
                     Icon(
                         imageVector = Icons.AutoMirrored.Outlined.ArrowRight,
                         contentDescription = null,
+                        tint = MaterialTheme.colorScheme.primary,
                     )
                     Row(
                         modifier = Modifier.weight(1f).padding(start = 6.dp),

@@ -19,6 +19,7 @@ import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.LargeTopAppBar
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBarDefaults
@@ -380,7 +381,7 @@ fun DownloadFormatPreferences(onNavigateBack: () -> Unit, navigateToSubtitlePage
     if (showVideoClipDialog) {
         AlertDialog(
             onDismissRequest = { showVideoClipDialog = false },
-            icon = { Icon(Icons.Outlined.ContentCut, null) },
+            icon = { Icon(Icons.Outlined.ContentCut, null, tint = MaterialTheme.colorScheme.primary) },
             confirmButton = {
                 ConfirmButton {
                     isVideoClipEnabled = true
@@ -401,7 +402,7 @@ fun DownloadFormatPreferences(onNavigateBack: () -> Unit, navigateToSubtitlePage
     if (showMergeAudioDialog) {
         AlertDialog(
             onDismissRequest = { showMergeAudioDialog = false },
-            icon = { Icon(Icons.Outlined.SpatialAudioOff, null) },
+            icon = { Icon(Icons.Outlined.SpatialAudioOff, null, tint = MaterialTheme.colorScheme.primary) },
             confirmButton = {
                 ConfirmButton {
                     mergeAudioStream = true

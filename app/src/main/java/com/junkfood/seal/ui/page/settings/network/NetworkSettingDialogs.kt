@@ -57,7 +57,7 @@ fun RateLimitDialog(onDismissRequest: () -> Unit) {
     val softwareKeyboardController = LocalSoftwareKeyboardController.current
     AlertDialog(
         onDismissRequest = onDismissRequest,
-        icon = { Icon(Icons.Outlined.Speed, null) },
+        icon = { Icon(Icons.Outlined.Speed, null, tint = MaterialTheme.colorScheme.primary) },
         title = { Text(stringResource(R.string.rate_limit)) },
         text = {
             Column {
@@ -128,7 +128,7 @@ fun ConcurrentDownloadDialog(onDismissRequest: () -> Unit) {
                 Text(stringResource(R.string.confirm))
             }
         },
-        icon = { Icon(Icons.Outlined.OfflineBolt, null) },
+        icon = { Icon(Icons.Outlined.OfflineBolt, null, tint = MaterialTheme.colorScheme.primary) },
         title = { Text(stringResource(R.string.concurrent_download)) },
         text = {
             Column {
@@ -160,7 +160,7 @@ fun ProxyConfigurationDialog(onDismissRequest: () -> Unit = {}) {
     var proxyUrl by remember { mutableStateOf(PROXY_URL.getString()) }
     AlertDialog(
         onDismissRequest = onDismissRequest,
-        icon = { Icon(Icons.Outlined.VpnKey, null) },
+        icon = { Icon(Icons.Outlined.VpnKey, null, tint = MaterialTheme.colorScheme.primary) },
         title = { Text(stringResource(R.string.proxy)) },
         text = {
             Column {

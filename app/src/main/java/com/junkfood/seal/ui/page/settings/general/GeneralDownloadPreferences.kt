@@ -195,7 +195,7 @@ fun GeneralDownloadPreferences(onNavigateBack: () -> Unit, navigateToTemplate: (
                                     contentDescription = null,
                                     modifier =
                                         Modifier.padding(start = 8.dp, end = 16.dp).size(24.dp),
-                                    tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                                    tint = MaterialTheme.colorScheme.primary,
                                 )
                             }
                         },
@@ -229,6 +229,7 @@ fun GeneralDownloadPreferences(onNavigateBack: () -> Unit, navigateToTemplate: (
                                 Icon(
                                     imageVector = Icons.Outlined.Settings,
                                     contentDescription = stringResource(id = R.string.open_settings),
+                                    tint = MaterialTheme.colorScheme.primary,
                                 )
                             }
                         },
@@ -516,7 +517,7 @@ fun DownloadArchiveDialog(
             }
         },
         dismissButton = { DismissButton { onDismissRequest() } },
-        icon = { Icon(imageVector = Icons.Outlined.Edit, contentDescription = null) },
+        icon = { Icon(imageVector = Icons.Outlined.Edit, contentDescription = null, tint = MaterialTheme.colorScheme.primary) },
         title = { Text(text = stringResource(id = R.string.edit_file)) },
         text = {
             Column(modifier = Modifier.padding(horizontal = 24.dp)) {

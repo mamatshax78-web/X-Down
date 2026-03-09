@@ -389,7 +389,7 @@ fun DownloadDirectoryPreferences(onNavigateBack: () -> Unit) {
     if (showClearTempDialog) {
         AlertDialog(
             onDismissRequest = { showClearTempDialog = false },
-            icon = { Icon(Icons.Outlined.FolderDelete, null) },
+            icon = { Icon(Icons.Outlined.FolderDelete, null, tint = MaterialTheme.colorScheme.tertiary) },
             title = { Text(stringResource(id = R.string.clear_temp_files)) },
             dismissButton = { DismissButton { showClearTempDialog = false } },
             text = {
@@ -442,7 +442,7 @@ fun DownloadDirectoryPreferences(onNavigateBack: () -> Unit) {
     if (showCustomCommandDirectoryDialog) {
         AlertDialog(
             onDismissRequest = { showCustomCommandDirectoryDialog = false },
-            icon = { Icon(imageVector = Icons.Outlined.Folder, contentDescription = null) },
+            icon = { Icon(imageVector = Icons.Outlined.Folder, contentDescription = null, tint = MaterialTheme.colorScheme.primary) },
             title = {
                 Text(
                     text = stringResource(id = R.string.custom_command_directory),
@@ -540,7 +540,7 @@ fun OutputTemplateDialog(
         },
         dismissButton = { DismissButton { onDismissRequest() } },
         title = { Text(text = stringResource(id = R.string.output_template)) },
-        icon = { Icon(imageVector = Icons.Outlined.FolderSpecial, contentDescription = null) },
+        icon = { Icon(imageVector = Icons.Outlined.FolderSpecial, contentDescription = null, tint = MaterialTheme.colorScheme.primary) },
         text = {
             Column {
                 Text(

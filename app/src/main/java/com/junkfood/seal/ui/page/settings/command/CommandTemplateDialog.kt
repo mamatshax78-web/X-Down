@@ -73,7 +73,7 @@ fun CommandTemplateDialog(
     var templateName by remember { mutableStateOf(commandTemplate.name) }
     var isError by remember { mutableStateOf(false) }
     AlertDialog(
-        icon = { Icon(if (newTemplate) Icons.Outlined.Add else Icons.Outlined.EditNote, null) },
+        icon = { Icon(if (newTemplate) Icons.Outlined.Add else Icons.Outlined.EditNote, null, tint = MaterialTheme.colorScheme.primary) },
         title = { Text(stringResource(if (newTemplate) R.string.new_template else R.string.edit)) },
         onDismissRequest = { onDismissRequest() },
         properties = DialogProperties(dismissOnBackPress = true, dismissOnClickOutside = false),
@@ -168,7 +168,7 @@ fun OptionChipsDialog(onDismissRequest: () -> Unit = {}) {
     SealDialog(
         onDismissRequest = onDismissRequest,
         title = { Text(text = stringResource(id = R.string.edit_shortcuts)) },
-        icon = { Icon(Icons.Outlined.Edit, null) },
+        icon = { Icon(Icons.Outlined.Edit, null, tint = MaterialTheme.colorScheme.primary) },
         text = {
             Column {
                 Text(

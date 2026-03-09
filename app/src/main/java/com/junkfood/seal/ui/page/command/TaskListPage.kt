@@ -263,6 +263,7 @@ fun ColumnScope.TaskCreatorDialogContent(
         modifier = Modifier.align(Alignment.CenterHorizontally),
         imageVector = Icons.Outlined.Add,
         contentDescription = null,
+        tint = MaterialTheme.colorScheme.primary,
     )
     Text(
         text = stringResource(id = R.string.new_task),

@@ -27,14 +27,14 @@ fun PasteFromClipBoardButton(onPaste: (String) -> Unit = {}) {
 @Composable
 fun PasteButton(onClick: () -> Unit = {}) {
     IconButton(onClick = onClick) {
-        Icon(Icons.Outlined.ContentPaste, stringResource(R.string.paste))
+        Icon(Icons.Outlined.ContentPaste, stringResource(R.string.paste), tint = MaterialTheme.colorScheme.primary)
     }
 }
 
 @Composable
 fun AddButton(onClick: () -> Unit, enabled: Boolean = true) {
     IconButton(onClick = onClick, enabled = enabled) {
-        Icon(imageVector = Icons.Outlined.Add, contentDescription = stringResource(R.string.add))
+        Icon(imageVector = Icons.Outlined.Add, contentDescription = stringResource(R.string.add), tint = MaterialTheme.colorScheme.primary)
     }
 }
 
@@ -45,7 +45,7 @@ fun ClearButton(onClick: () -> Unit) {
             modifier = Modifier.size(24.dp),
             imageVector = Icons.Outlined.Cancel,
             contentDescription = stringResource(id = R.string.clear),
-            tint = MaterialTheme.colorScheme.onSurfaceVariant,
+            tint = MaterialTheme.colorScheme.tertiary,
         )
     }
 }
@@ -63,6 +63,7 @@ fun BackButton(onClick: () -> Unit) {
         Icon(
             imageVector = Icons.AutoMirrored.Outlined.ArrowBack,
             contentDescription = stringResource(R.string.back),
+            tint = MaterialTheme.colorScheme.primary,
         )
     }
 }

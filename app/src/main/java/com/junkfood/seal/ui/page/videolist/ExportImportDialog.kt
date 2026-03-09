@@ -57,7 +57,7 @@ fun ExportDialog(
         },
         title = { Text(text = stringResource(id = R.string.export_download_history)) },
         icon = {
-            Icon(imageVector = Icons.AutoMirrored.Outlined.DriveFileMove, contentDescription = null)
+            Icon(imageVector = Icons.AutoMirrored.Outlined.DriveFileMove, contentDescription = null, tint = MaterialTheme.colorScheme.primary)
         },
         text = {
             Column {
@@ -141,7 +141,7 @@ fun ImportDialog(
             }
         },
         title = { Text(text = stringResource(id = R.string.import_download_history)) },
-        icon = { Icon(imageVector = Icons.Outlined.Restore, contentDescription = null) },
+        icon = { Icon(imageVector = Icons.Outlined.Restore, contentDescription = null, tint = MaterialTheme.colorScheme.primary) },
         text = {
             Column {
                 Text(

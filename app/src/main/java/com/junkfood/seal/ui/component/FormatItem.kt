@@ -161,6 +161,7 @@ fun FormatVideoPreview(
                     imageVector = Icons.Outlined.MoreVert,
                     stringResource(id = R.string.show_more_actions),
                     modifier = Modifier.size(18.dp),
+                    tint = MaterialTheme.colorScheme.secondary,
                 )
             }
 
@@ -171,7 +172,7 @@ fun FormatVideoPreview(
                 scrollState = rememberScrollState(),
             ) {
                 DropdownMenuItem(
-                    leadingIcon = { Icon(imageVector = Icons.Outlined.Edit, null) },
+                    leadingIcon = { Icon(imageVector = Icons.Outlined.Edit, null, tint = MaterialTheme.colorScheme.primary) },
                     text = { Text(text = stringResource(id = R.string.rename)) },
                     onClick = {
                         onRename()
@@ -179,7 +180,7 @@ fun FormatVideoPreview(
                     },
                 )
                 DropdownMenuItem(
-                    leadingIcon = { Icon(imageVector = Icons.Outlined.Image, null) },
+                    leadingIcon = { Icon(imageVector = Icons.Outlined.Image, null, tint = MaterialTheme.colorScheme.primary) },
                     text = { Text(text = stringResource(id = R.string.thumbnail)) },
                     onClick = {
                         onOpenThumbnail()
@@ -188,7 +189,7 @@ fun FormatVideoPreview(
                 )
                 if (isClippingAvailable && !isClippingVideo && !isSplittingVideo) {
                     DropdownMenuItem(
-                        leadingIcon = { Icon(Icons.Outlined.ContentCut, null) },
+                        leadingIcon = { Icon(Icons.Outlined.ContentCut, null, tint = MaterialTheme.colorScheme.primary) },
                         text = { Text(text = stringResource(id = R.string.clip_video)) },
                         onClick = {
                             onClippingToggled()
@@ -198,7 +199,7 @@ fun FormatVideoPreview(
                 }
                 if (isSplitByChapterAvailable && !isClippingVideo && !isSplittingVideo) {
                     DropdownMenuItem(
-                        leadingIcon = { Icon(Icons.Outlined.VerticalSplit, null) },
+                        leadingIcon = { Icon(Icons.Outlined.VerticalSplit, null, tint = MaterialTheme.colorScheme.primary) },
                         text = { Text(text = stringResource(id = R.string.split_video)) },
                         onClick = {
                             onSplittingToggled()

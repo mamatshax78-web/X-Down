@@ -68,6 +68,7 @@ import com.junkfood.seal.R
 import com.junkfood.seal.ui.common.LocalDarkTheme
 import com.junkfood.seal.ui.common.LocalWindowWidthState
 import com.junkfood.seal.ui.common.Route
+import com.junkfood.seal.ui.common.ThemedIconColors
 import com.junkfood.seal.ui.page.downloadv2.DownloadPageImplV2
 import kotlinx.coroutines.launch
 
@@ -137,7 +138,7 @@ fun NavigationDrawer(
                                 onClick = { scope.launch { drawerState.open() } },
                                 modifier = Modifier.align(Alignment.CenterHorizontally),
                             ) {
-                                Icon(Icons.Outlined.Menu, null)
+                                Icon(Icons.Outlined.Menu, null, tint = ThemedIconColors.primary)
                             }
                             Spacer(Modifier.weight(1f))
                             NavigationRailContent(
@@ -276,7 +277,7 @@ fun NavigationDrawerSheetContent(
             ProvideTextStyle(MaterialTheme.typography.labelLarge) {
                 NavigationDrawerItem(
                     label = { Text(stringResource(R.string.home)) },
-                    icon = { Icon(Icons.Filled.Download, null) },
+                    icon = { Icon(Icons.Filled.Download, null, tint = ThemedIconColors.primary) },
                     onClick = {
                         scope
                             .launch { onDismissRequest() }
@@ -287,7 +288,7 @@ fun NavigationDrawerSheetContent(
                 )
                 NavigationDrawerItem(
                     label = { Text(stringResource(R.string.downloads_history)) },
-                    icon = { Icon(Icons.Outlined.Subscriptions, null) },
+                    icon = { Icon(Icons.Outlined.Subscriptions, null, tint = ThemedIconColors.secondary) },
                     onClick = {
                         scope
                             .launch { onDismissRequest() }
@@ -298,7 +299,7 @@ fun NavigationDrawerSheetContent(
                 )
                 NavigationDrawerItem(
                     label = { Text(stringResource(R.string.custom_command)) },
-                    icon = { Icon(Icons.Outlined.Terminal, null) },
+                    icon = { Icon(Icons.Outlined.Terminal, null, tint = ThemedIconColors.tertiary) },
                     onClick = {
                         scope
                             .launch { onDismissRequest() }
@@ -321,7 +322,7 @@ fun NavigationDrawerSheetContent(
             ProvideTextStyle(MaterialTheme.typography.labelLarge) {
                 NavigationDrawerItem(
                     label = { Text(stringResource(R.string.settings)) },
-                    icon = { Icon(Icons.Outlined.Settings, null) },
+                    icon = { Icon(Icons.Outlined.Settings, null, tint = ThemedIconColors.primary) },
                     onClick = {
                         scope
                             .launch { onDismissRequest() }
@@ -332,7 +333,7 @@ fun NavigationDrawerSheetContent(
                 )
                 NavigationDrawerItem(
                     label = { Text(stringResource(R.string.trouble_shooting)) },
-                    icon = { Icon(Icons.Rounded.BugReport, null) },
+                    icon = { Icon(Icons.Rounded.BugReport, null, tint = ThemedIconColors.secondary) },
                     onClick = {
                         scope
                             .launch { onDismissRequest() }
@@ -343,7 +344,7 @@ fun NavigationDrawerSheetContent(
                 )
                 NavigationDrawerItem(
                     label = { Text(stringResource(R.string.sponsor)) },
-                    icon = { Icon(Icons.Outlined.VolunteerActivism, null) },
+                    icon = { Icon(Icons.Outlined.VolunteerActivism, null, tint = ThemedIconColors.tertiary) },
                     onClick = {
                         scope
                             .launch { onDismissRequest() }
@@ -354,7 +355,7 @@ fun NavigationDrawerSheetContent(
                 )
                 NavigationDrawerItem(
                     label = { Text(stringResource(R.string.about)) },
-                    icon = { Icon(Icons.Rounded.Info, null) },
+                    icon = { Icon(Icons.Rounded.Info, null, tint = ThemedIconColors.primary) },
                     onClick = {
                         scope
                             .launch { onDismissRequest() }
@@ -416,6 +417,7 @@ fun NavigationRailContent(
                     if (currentTopDestination == Route.HOME) Icons.Filled.Download
                     else Icons.Outlined.Download,
                     stringResource(R.string.home),
+                    tint = ThemedIconColors.primary,
                 )
             },
             modifier = Modifier,
@@ -429,6 +431,7 @@ fun NavigationRailContent(
                     if (currentTopDestination == Route.DOWNLOADS) Icons.Filled.Subscriptions
                     else Icons.Outlined.Subscriptions,
                     stringResource(R.string.downloads_history),
+                    tint = ThemedIconColors.secondary,
                 )
             },
             modifier = Modifier,
@@ -442,6 +445,7 @@ fun NavigationRailContent(
                     if (currentTopDestination == Route.TASK_LIST) Icons.Filled.Terminal
                     else Icons.Outlined.Terminal,
                     stringResource(R.string.custom_command),
+                    tint = ThemedIconColors.tertiary,
                 )
             },
             modifier = Modifier,
@@ -455,6 +459,7 @@ fun NavigationRailContent(
                     if (currentTopDestination == Route.SETTINGS_PAGE) Icons.Filled.Settings
                     else Icons.Outlined.Settings,
                     stringResource(R.string.settings),
+                    tint = ThemedIconColors.primary,
                 )
             },
             modifier = Modifier,

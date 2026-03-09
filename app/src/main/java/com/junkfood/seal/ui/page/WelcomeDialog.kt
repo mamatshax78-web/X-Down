@@ -14,6 +14,7 @@ import androidx.compose.material.icons.outlined.SettingsSuggest
 import androidx.compose.material.icons.outlined.Subscriptions
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -98,7 +99,7 @@ fun IconDescription(modifier: Modifier = Modifier, icon: ImageVector, descriptio
         modifier = modifier.padding(top = 12.dp, bottom = 9.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
-        Icon(modifier = Modifier.size(24.dp), imageVector = icon, contentDescription = null)
+        Icon(modifier = Modifier.size(24.dp), imageVector = icon, contentDescription = null, tint = MaterialTheme.colorScheme.primary)
         Text(modifier = Modifier.padding(start = 12.dp), text = description)
     }
 }

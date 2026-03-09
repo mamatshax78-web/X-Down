@@ -444,6 +444,7 @@ fun DownloadSettingDialog(
                     modifier = Modifier.align(Alignment.CenterHorizontally),
                     imageVector = Icons.Outlined.DoneAll,
                     contentDescription = null,
+                    tint = MaterialTheme.colorScheme.primary,
                 )
                 Text(
                     text = stringResource(R.string.settings_before_download),

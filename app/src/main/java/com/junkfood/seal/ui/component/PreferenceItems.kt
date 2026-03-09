@@ -58,6 +58,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.junkfood.seal.R
 import com.junkfood.seal.ui.theme.FixedAccentColors
+import com.junkfood.seal.ui.common.ThemedIconColors
 import com.junkfood.seal.ui.theme.SealTheme
 import com.junkfood.seal.ui.theme.applyOpacity
 import com.junkfood.seal.ui.theme.harmonizeWithPrimary
@@ -109,7 +110,7 @@ fun PreferenceItem(
                         imageVector = icon,
                         contentDescription = null,
                         modifier = Modifier.padding(start = 8.dp, end = 16.dp).size(24.dp),
-                        tint = MaterialTheme.colorScheme.onSurfaceVariant.applyOpacity(enabled),
+                        tint = ThemedIconColors.primary(enabled),
                     )
                 }
 
@@ -118,7 +119,7 @@ fun PreferenceItem(
                         painter = icon,
                         contentDescription = null,
                         modifier = Modifier.padding(start = 8.dp, end = 16.dp).size(24.dp),
-                        tint = MaterialTheme.colorScheme.onSurfaceVariant.applyOpacity(enabled),
+                        tint = ThemedIconColors.primary(enabled),
                     )
                 }
             }
@@ -205,7 +206,7 @@ fun PreferenceItemVariant(
                     imageVector = icon,
                     contentDescription = null,
                     modifier = Modifier.padding(start = 8.dp, end = 16.dp).size(24.dp),
-                    tint = MaterialTheme.colorScheme.onSurfaceVariant.applyOpacity(enabled),
+                    tint = ThemedIconColors.primary(enabled),
                 )
             }
             Column(
@@ -373,7 +374,7 @@ fun PreferenceSwitchVariant(
                     imageVector = icon,
                     contentDescription = null,
                     modifier = Modifier.padding(start = 8.dp, end = 16.dp).size(24.dp),
-                    tint = MaterialTheme.colorScheme.onSurfaceVariant.applyOpacity(enabled),
+                    tint = ThemedIconColors.primary(enabled),
                 )
             }
             Column(modifier = Modifier.weight(1f)) {
@@ -427,7 +428,7 @@ fun PreferenceSwitch(
                     imageVector = icon,
                     contentDescription = null,
                     modifier = Modifier.padding(start = 8.dp, end = 16.dp).size(24.dp),
-                    tint = MaterialTheme.colorScheme.onSurfaceVariant.applyOpacity(enabled),
+                    tint = ThemedIconColors.primary(enabled),
                 )
             }
             Column(modifier = Modifier.weight(1f)) {
@@ -480,7 +481,7 @@ fun PreferenceSwitchWithDivider(
                     imageVector = icon,
                     contentDescription = null,
                     modifier = Modifier.padding(start = 8.dp, end = 16.dp).size(24.dp),
-                    tint = MaterialTheme.colorScheme.onSurfaceVariant.applyOpacity(enabled),
+                    tint = ThemedIconColors.primary(enabled),
                 )
             }
             Column(modifier = Modifier.weight(1f)) {
@@ -839,7 +840,7 @@ fun PreferenceInfo(
                 if (applyPaddings) padding(horizontal = 16.dp, vertical = 16.dp) else this
             }
     ) {
-        Icon(modifier = Modifier.padding(), imageVector = icon, contentDescription = null)
+        Icon(modifier = Modifier.padding(), imageVector = icon, contentDescription = null, tint = MaterialTheme.colorScheme.primary)
         Text(
             modifier = Modifier.padding(top = 16.dp),
             text = text,

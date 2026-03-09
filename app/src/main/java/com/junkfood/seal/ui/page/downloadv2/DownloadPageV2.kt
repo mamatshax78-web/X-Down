@@ -592,6 +592,7 @@ private fun HeaderCompact(modifier: Modifier = Modifier, onMenuOpen: () -> Unit)
                 imageVector = Icons.Outlined.Menu,
                 contentDescription = stringResource(R.string.show_navigation_drawer),
                 modifier = Modifier,
+                tint = MaterialTheme.colorScheme.primary,
             )
         }
         Spacer(modifier = Modifier.width(4.dp))
@@ -630,7 +631,7 @@ fun FABs(modifier: Modifier = Modifier, downloadCallback: () -> Unit = {}) {
                         modifier = Modifier.widthIn(min = 80.dp).padding(horizontal = 16.dp),
                         verticalAlignment = Alignment.CenterVertically,
                     ) {
-                        Icon(Icons.Outlined.FileDownload, contentDescription = null)
+                        Icon(Icons.Outlined.FileDownload, contentDescription = null, tint = MaterialTheme.colorScheme.primary)
                         Spacer(Modifier.width(12.dp))
                         Text(stringResource(R.string.download))
                     }
@@ -638,6 +639,7 @@ fun FABs(modifier: Modifier = Modifier, downloadCallback: () -> Unit = {}) {
                     Icon(
                         Icons.Outlined.FileDownload,
                         contentDescription = stringResource(R.string.download),
+                        tint = MaterialTheme.colorScheme.primary,
                     )
                 }
             },
@@ -742,6 +744,7 @@ fun SubHeader(
                     if (isGridView) Icons.AutoMirrored.Outlined.List else Icons.Outlined.GridView,
                 contentDescription = null,
                 modifier = Modifier.size(16.dp),
+                tint = MaterialTheme.colorScheme.secondary,
             )
         }
 
@@ -756,6 +759,7 @@ fun SubHeader(
                 imageVector = Icons.Outlined.MoreVert,
                 contentDescription = null,
                 modifier = Modifier.size(16.dp),
+                tint = MaterialTheme.colorScheme.secondary,
             )
         }
     }
@@ -771,7 +775,8 @@ private fun ExitConfirmationDialog(
             Icon(
                 imageVector = Icons.Outlined.ExitToApp,
                 contentDescription = null,
-                modifier = Modifier.size(24.dp)
+                modifier = Modifier.size(24.dp),
+                tint = MaterialTheme.colorScheme.tertiary,
             )
         },
         title = {

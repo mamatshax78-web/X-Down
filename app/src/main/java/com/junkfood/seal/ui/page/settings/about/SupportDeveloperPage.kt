@@ -378,7 +378,7 @@ fun SupportDeveloperPage(
                             Icon(
                                 imageVector = Icons.Outlined.OpenInNew,
                                 contentDescription = null,
-                                tint = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.5f),
+                                tint = MaterialTheme.colorScheme.primary.copy(alpha = 0.7f),
                                 modifier = Modifier.size(20.dp)
                             )
                         }

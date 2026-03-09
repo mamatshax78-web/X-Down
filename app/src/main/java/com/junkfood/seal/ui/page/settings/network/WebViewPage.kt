@@ -97,6 +97,7 @@ fun WebViewPage(cookiesViewModel: CookiesViewModel, onDismissRequest: () -> Unit
                         Icon(
                             imageVector = Icons.Outlined.Close,
                             stringResource(id = androidx.appcompat.R.string.abc_action_mode_done),
+                            tint = MaterialTheme.colorScheme.primary,
                         )
                     }
                 },

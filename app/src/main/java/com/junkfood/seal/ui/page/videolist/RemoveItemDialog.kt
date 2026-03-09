@@ -28,7 +28,7 @@ fun RemoveItemDialog(
     SealDialog(
         onDismissRequest = onDismissRequest,
         title = { Text(text = stringResource(R.string.delete_info)) },
-        icon = { Icon(Icons.Outlined.Delete, null) },
+        icon = { Icon(Icons.Outlined.Delete, null, tint = MaterialTheme.colorScheme.tertiary) },
         text = {
             Column {
                 Text(

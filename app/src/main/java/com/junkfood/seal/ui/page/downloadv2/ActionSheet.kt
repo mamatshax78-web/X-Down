@@ -496,7 +496,7 @@ fun ActionSheetInfo(modifier: Modifier = Modifier, task: Task, viewState: ViewSt
                     )
                 },
                 leadingIcon = {
-                    Icon(imageVector = Icons.Outlined.FileDownload, contentDescription = null)
+                    Icon(imageVector = Icons.Outlined.FileDownload, contentDescription = null, tint = MaterialTheme.colorScheme.primary)
                 },
             )
 
@@ -518,7 +518,7 @@ fun ActionSheetInfo(modifier: Modifier = Modifier, task: Task, viewState: ViewSt
                         Text(details, style = MaterialTheme.typography.bodySmall)
                     },
                     leadingIcon = {
-                        Icon(imageVector = Icons.Outlined.VideoFile, contentDescription = null)
+                        Icon(imageVector = Icons.Outlined.VideoFile, contentDescription = null, tint = MaterialTheme.colorScheme.primary)
                     },
                 )
             }
@@ -546,7 +546,7 @@ fun ActionSheetInfo(modifier: Modifier = Modifier, task: Task, viewState: ViewSt
                         Text(details, style = MaterialTheme.typography.bodySmall)
                     },
                     leadingIcon = {
-                        Icon(imageVector = Icons.Outlined.AudioFile, contentDescription = null)
+                        Icon(imageVector = Icons.Outlined.AudioFile, contentDescription = null, tint = MaterialTheme.colorScheme.primary)
                     },
                 )
             }
@@ -556,7 +556,7 @@ fun ActionSheetInfo(modifier: Modifier = Modifier, task: Task, viewState: ViewSt
                     Text(text = extractorKey, style = MaterialTheme.typography.titleSmall)
                     Text(text = url, style = MaterialTheme.typography.bodySmall)
                 },
-                leadingIcon = { Icon(imageVector = Icons.Outlined.Link, contentDescription = null) },
+                leadingIcon = { Icon(imageVector = Icons.Outlined.Link, contentDescription = null, tint = MaterialTheme.colorScheme.tertiary) },
             )
         }
     }

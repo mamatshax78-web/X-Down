@@ -381,6 +381,7 @@ fun DownloadPageImpl(
                             Icon(
                                 imageVector = Icons.Outlined.Settings,
                                 contentDescription = stringResource(id = R.string.settings),
+                                tint = MaterialTheme.colorScheme.primary,
                             )
                         }
                     }
@@ -414,6 +415,7 @@ fun DownloadPageImpl(
                                 Icon(
                                     imageVector = Icons.Outlined.Terminal,
                                     contentDescription = stringResource(id = R.string.running_tasks),
+                                    tint = MaterialTheme.colorScheme.tertiary,
                                 )
                             }
                         }
@@ -437,6 +439,7 @@ fun DownloadPageImpl(
                             Icon(
                                 imageVector = Icons.Outlined.Subscriptions,
                                 contentDescription = stringResource(id = R.string.downloads_history),
+                                tint = MaterialTheme.colorScheme.secondary,
                             )
                         }
                     }
@@ -750,6 +753,7 @@ fun FABs(
                 Icon(
                     Icons.Outlined.ContentPaste,
                     contentDescription = stringResource(R.string.paste),
+                    tint = MaterialTheme.colorScheme.primary,
                 )
             },
             modifier = Modifier.padding(vertical = 12.dp),
@@ -760,6 +764,7 @@ fun FABs(
                 Icon(
                     Icons.Outlined.FileDownload,
                     contentDescription = stringResource(R.string.download),
+                    tint = MaterialTheme.colorScheme.primary,
                 )
             },
             modifier = Modifier.padding(vertical = 12.dp),

@@ -116,7 +116,7 @@ fun TroubleShootingPage(
                                 imageVector = Icons.Outlined.Update,
                                 contentDescription = null,
                                 modifier = Modifier.padding(start = 8.dp, end = 16.dp).size(24.dp),
-                                tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                                tint = MaterialTheme.colorScheme.primary,
                             )
                         }
                     },
@@ -152,6 +152,7 @@ fun TroubleShootingPage(
                             Icon(
                                 imageVector = Icons.Outlined.Settings,
                                 contentDescription = stringResource(id = R.string.open_settings),
+                                tint = MaterialTheme.colorScheme.primary,
                             )
                         }
                     },

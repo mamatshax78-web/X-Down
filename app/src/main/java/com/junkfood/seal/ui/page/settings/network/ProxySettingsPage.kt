@@ -587,7 +587,8 @@ fun ProxySettingsPage(
                             Icon(
                                 imageVector = Icons.Outlined.Refresh,
                                 contentDescription = null,
-                                modifier = Modifier.size(18.dp)
+                                modifier = Modifier.size(18.dp),
+                                tint = MaterialTheme.colorScheme.primary
                             )
                             Spacer(modifier = Modifier.width(8.dp))
                             Text(if (isTesting) stringResource(R.string.testing) else stringResource(R.string.test_connection))
@@ -609,7 +610,8 @@ fun ProxySettingsPage(
                             Icon(
                                 imageVector = Icons.Outlined.Speed,
                                 contentDescription = null,
-                                modifier = Modifier.size(18.dp)
+                                modifier = Modifier.size(18.dp),
+                                tint = MaterialTheme.colorScheme.primary
                             )
                             Spacer(modifier = Modifier.width(8.dp))
                             Text(if (isSpeedTesting) stringResource(R.string.testing_speed) else stringResource(R.string.run_speed_test))
@@ -899,7 +901,8 @@ private fun FreeProxySection(
                 leadingIcon = {
                     Icon(
                         imageVector = Icons.Outlined.Public,
-                        contentDescription = null
+                        contentDescription = null,
+                        tint = MaterialTheme.colorScheme.primary
                     )
                 },
                 modifier = Modifier
@@ -935,7 +938,8 @@ private fun FreeProxySection(
                 leadingIcon = {
                     Icon(
                         imageVector = Icons.Outlined.CloudQueue,
-                        contentDescription = null
+                        contentDescription = null,
+                        tint = MaterialTheme.colorScheme.primary
                     )
                 },
                 modifier = Modifier.fillMaxWidth()
@@ -971,7 +975,8 @@ private fun FreeProxySection(
             Icon(
                 imageVector = Icons.Outlined.Refresh,
                 contentDescription = null,
-                modifier = Modifier.size(18.dp)
+                modifier = Modifier.size(18.dp),
+                tint = MaterialTheme.colorScheme.primary
             )
             Spacer(modifier = Modifier.width(8.dp))
             Text(stringResource(R.string.auto_connect_proxy))
@@ -1017,7 +1022,8 @@ private fun CustomProxySection(
             leadingIcon = {
                 Icon(
                     imageVector = Icons.Outlined.Computer,
-                    contentDescription = null
+                    contentDescription = null,
+                    tint = MaterialTheme.colorScheme.primary
                 )
             },
             modifier = Modifier.fillMaxWidth(),
@@ -1034,7 +1040,8 @@ private fun CustomProxySection(
             leadingIcon = {
                 Icon(
                     imageVector = Icons.Outlined.Security,
-                    contentDescription = null
+                    contentDescription = null,
+                    tint = MaterialTheme.colorScheme.primary
                 )
             },
             modifier = Modifier.fillMaxWidth(),

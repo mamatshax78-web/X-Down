@@ -114,7 +114,7 @@ fun YtdlpUpdateChannelDialog(modifier: Modifier = Modifier, onDismissRequest: ()
         },
         dismissButton = { DismissButton { onDismissRequest() } },
         title = { Text(text = stringResource(id = R.string.update)) },
-        icon = { Icon(Icons.Outlined.SyncAlt, null) },
+        icon = { Icon(Icons.Outlined.SyncAlt, null, tint = MaterialTheme.colorScheme.primary) },
         text = {
             LazyColumn() {
                 item {
