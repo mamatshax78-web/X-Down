@@ -16,9 +16,8 @@ jobs:
           # Nomlarni o'zgartirish
           find . -name "strings.xml" -type f -exec sed -i 's/Seal Plus/X-Down/g' {} +
           find . -name "strings.xml" -type f -exec sed -i 's/Seal/X-Down/g' {} +
-          # Paketni o'zgartirish
+          # Paket nomini o'zgartirish
           find . -name "build.gradle*" -type f -exec sed -i 's/com.junkfood.seal/com.shaxzod.xdown/g' {} +
-          find . -name "build.gradle*" -type f -exec sed -i 's/com.mahesh.sealplus/com.shaxzod.xdown/g' {} +
 
       - name: Set up JDK 17
         uses: actions/setup-java@v3
@@ -33,7 +32,7 @@ jobs:
       - name: Build APK
         run: ./gradlew assembleDebug
 
-      - name: Upload APK
+      - name: Upload Final APK
         uses: actions/upload-artifact@v4
         with:
           name: X-Down-Final-APK
