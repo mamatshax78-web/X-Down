@@ -1,3 +1,14 @@
+      - name: Auto Rebrand to X-Down
+        run: |
+          # Barcha strings.xml fayllarini bittada o'zgartirish
+          find . -name "strings.xml" -type f -exec sed -i 's/Seal Plus/X-Down/g' {} +
+          find . -name "strings.xml" -type f -exec sed -i 's/Seal/X-Down/g' {} +
+          
+          # Paket nomini avtomatik o'zgartirish
+          find . -name "build.gradle*" -type f -exec sed -i 's/com.junkfood.seal/com.shaxzod.xdown/g' {} +
+          find . -name "build.gradle*" -type f -exec sed -i 's/com.mahesh.sealplus/com.shaxzod.xdown/g' {} +
+
+
 name: Build Release APK
 
 on:
