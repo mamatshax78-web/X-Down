@@ -1,15 +1,4 @@
-      - name: Auto Rebrand to X-Down
-        run: |
-          # Barcha strings.xml fayllarini bittada o'zgartirish
-          find . -name "strings.xml" -type f -exec sed -i 's/Seal Plus/X-Down/g' {} +
-          find . -name "strings.xml" -type f -exec sed -i 's/Seal/X-Down/g' {} +
-          
-          # Paket nomini avtomatik o'zgartirish
-          find . -name "build.gradle*" -type f -exec sed -i 's/com.junkfood.seal/com.shaxzod.xdown/g' {} +
-          find . -name "build.gradle*" -type f -exec sed -i 's/com.mahesh.sealplus/com.shaxzod.xdown/g' {} +
-
-
-name: Build Release APK
+name: Build X-Down APK
 
 on:
   workflow_dispatch:
@@ -19,294 +8,33 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+      - name: Checkout Code
+        uses: actions/checkout@v4
 
-    - name: set up JDK 21
-      uses: actions/setup-java@v4
-      with:
-        java-version: '21'
-        distribution: 'temurin'
-        cache: 'gradle'
+      - name: Auto Rebrand to X-Down
+        run: |
+          # Nomlarni o'zgartirish
+          find . -name "strings.xml" -type f -exec sed -i 's/Seal Plus/X-Down/g' {} +
+          find . -name "strings.xml" -type f -exec sed -i 's/Seal/X-Down/g' {} +
+          # Paketni o'zgartirish
+          find . -name "build.gradle*" -type f -exec sed -i 's/com.junkfood.seal/com.shaxzod.xdown/g' {} +
+          find . -name "build.gradle*" -type f -exec sed -i 's/com.mahesh.sealplus/com.shaxzod.xdown/g' {} +
 
-    - name: Setup Android SDK
-      uses: android-actions/setup-android@v3.2.1
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: 'gradle'
 
-    - uses: gradle/actions/setup-gradle@v4
-      with:
-        build-scan-publish: true
-        build-scan-terms-of-use-url: "https://gradle.com/help/legal-terms-of-use"
-        build-scan-terms-of-use-agree: "yes"
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
 
-    # --- NAYA STEP: Keystore Decode Karna ---
-    - name: Decode Keystore
-      env:
-        ANDROID_SIGNING_KEY: ${{ secrets.ANDROID_SIGNING_KEY }}
-      run: |
-        echo "? Decoding Key..."
-        echo "$ANDROID_SIGNING_KEY" | tr -d '\n\r ' | base64 --decode > "${{ github.workspace }}/Mahesh.jks"
+      - name: Build APK
+        run: ./gradlew assembleDebug
 
-    # --- UPDATED STEP: Fast Build aur Native Signing Ek Sath ---
-    - name: Build and Sign Release APKs
-      env:
-        ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
-        ANDROID_ALIAS: ${{ secrets.ANDROID_ALIAS }}
-        ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
-      run: |
-        ./gradlew assembleRelease --parallel --build-cache --no-daemon \
-          -Pandroid.injected.signing.store.file="${{ github.workspace }}/Mahesh.jks" \
-          -Pandroid.injected.signing.store.password="$ANDROID_KEYSTORE_PASSWORD" \
-          -Pandroid.injected.signing.key.alias="$ANDROID_ALIAS" \
-          -Pandroid.injected.signing.key.password="$ANDROID_KEY_PASSWORD"
-
-    - name: Get version name
-      id: version
-      run: |
-        VERSION=$(grep -A 1 'val currentVersion: Version =' buildSrc/src/main/kotlin/Version.kt | grep -oP 'versionMajor = \K\d+' | head -1).$(grep -A 1 'val currentVersion: Version =' buildSrc/src/main/kotlin/Version.kt | grep -oP 'versionMinor = \K\d+' | head -1).$(grep -A 1 'val currentVersion: Version =' buildSrc/src/main/kotlin/Version.kt | grep -oP 'versionPatch = \K\d+' | head -1)
-        echo "VERSION=${VERSION}" >> $GITHUB_OUTPUT
-        echo "Version: ${VERSION}"
-
-    - name: Read release configuration
-      id: release_config
-      run: |
-        SHOULD_RELEASE=$(jq -r '.release' release.json)
-        echo "SHOULD_RELEASE=${SHOULD_RELEASE}" >> $GITHUB_OUTPUT
-        echo "Release flag: ${SHOULD_RELEASE}"
-        if [ "${SHOULD_RELEASE}" = "true" ]; then
-          echo "? Release will be published"
-        else
-          echo "?? Release publishing is disabled - APKs will be uploaded as artifacts only"
-        fi
-
-    - name: List all APK files for debugging
-      run: |
-        echo "? All APK files in output directory:"
-        find app/build/outputs/apk -name "*.apk" -type f -exec ls -lh {} \;
-        echo ""
-        echo "? Directory structure:"
-        ls -R app/build/outputs/apk/
-
-    - name: Create Release
-      if: steps.release_config.outputs.SHOULD_RELEASE == 'true'
-      uses: softprops/action-gh-release@v2
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        tag_name: v${{ steps.version.outputs.VERSION }}
-        name: Seal Plus v${{ steps.version.outputs.VERSION }}
-        body: |
-          ## ✨ Seal Plus v2.4.0 - Premium Animations, Icon Theming & Share Intent
-          
-          ---
-          
-          ### ✨ Animated Branding & Visual Polish
-          
-          * **Animated Glowing "+" Logo**
-              + The "+" in "Seal+" features a flowing gradient animation (primary → tertiary → secondary)
-              + Continuous pulsing glow shadow for a premium, eye-catching look
-          
-          * **Gradient Circular Progress Indicator**
-              + Premium sweep-gradient spinner replaces the plain loading indicator in the download dialog
-              + Rotating arc with breathing animation and smooth color shifting
-          
-          ### 🎨 UI & Theme Enhancements
-          
-          * **Typewriter URL Placeholder Animation**
-              + "Enter URL to download" placeholder reveals character-by-character with a typewriter effect
-              + Flowing gradient brush matching the Seal+ brand colors
-          
-          * **Redesigned Navigation Drawer Header**
-              + Center-aligned modern header with app logo, title, subtitle, and version badge
-              + Removed active/selected state for cleaner navigation
-          
-          * **Dark Theme On by Default**
-              + New installations default to dark theme; existing users keep their saved preference
-          
-          ### 🎯 Consistent Icon Theming
-          
-          * **Material Theme Color Refactor**
-              + Refactored icon tinting across 30+ screens to use `MaterialTheme.colorScheme`
-              + Consistent look across Light, Dark, and Gradient Dark themes
-          
-          ### 🍞 Themed Toast System
-          
-          * **Custom Themed Toast Manager**
-              + Branded themed toast notifications matching the app's Material 3 color scheme
-          
-          ### 🔗 Share Intent & Navigation
-          
-          * **Share Intent URL Handling**
-              + URLs shared from other apps automatically pre-fill in the download input field
-          
-          * **Navigation Route Updates**
-              + Sponsor page now redirects to Support Developer page
-              + Settings toggle click behavior and icon animations improved
-          
-          ---
-          
-          ### 📦 Installation
-          
-          Download the appropriate APK for your device:
-          - **Universal APK**: Works on all devices (recommended)
-          - **arm64-v8a**: For 64-bit ARM devices (most modern phones)
-          - **armeabi-v7a**: For 32-bit ARM devices
-          - **x86_64**: For 64-bit x86 devices
-          - **x86**: For 32-bit x86 devices
-          
-          ### ✨ Key Features (v2.4)
-          - ✨ **Animated Glowing "+"** - Flowing gradient on Seal+ branding
-          - 🎨 **Typewriter URL Placeholder** - Animated input hint
-          - 🔄 **Gradient Spinner** - Premium loading indicator
-          - 🧭 **Redesigned Nav Drawer** - Center-aligned header with logo
-          - 🎯 **30+ Icon Theme Refactor** - Consistent theme colors
-          - 🍞 **Themed Toast System** - Branded toast notifications
-          - 🔗 **Share Intent Support** - Pre-fill URLs from shares
-          - 🌙 **Dark Theme Default** - Dark mode for new users
-          - ⏯️ **Pause/Resume downloads** with queue support
-          - 🌐 Download from 1000+ sites via yt-dlp
-          - 🔄 **Retry failed downloads** - One-click recovery
-          - ⏯️ **Pause/Resume downloads** with queue support
-          - 🌐 Download from 1000+ sites via yt-dlp
-          
-          ### 📜 Full Changelog
-          See [CHANGELOG.md](https://github.com/MaheshTechnicals/Sealplus/blob/main/CHANGELOG.md) for complete version history.
-          
-          ---
-          
-          Built on: ${{ github.event.head_commit.timestamp }}
-          Commit: ${{ github.sha }}
-        draft: false
-        prerelease: false
-        make_latest: true
-        files: |
-          app/build/outputs/apk/generic/release/*.apk
-
-    - name: Send Telegram Notification to Channel
-      if: steps.release_config.outputs.SHOULD_RELEASE == 'true'
-      continue-on-error: true
-      env:
-        TGTOKEN: ${{ secrets.TGTOKEN }}
-        TGCHANNEL: ${{ secrets.TGCHANNEL }}
-      run: |
-        # Skip if Telegram credentials are not configured
-        if [ -z "$TGTOKEN" ] || [ -z "$TGCHANNEL" ]; then
-          echo "?? Telegram notification skipped (TGTOKEN or TGCHANNEL not configured)"
-          exit 0
-        fi
-        
-        echo "? Sending notification to Telegram Channel: $TGCHANNEL"
-        
-        # Prepare the release URL
-        RELEASE_URL="https://github.com/${{ github.repository }}/releases/tag/v${{ steps.version.outputs.VERSION }}"
-        
-        # Create a beautiful Telegram message with HTML formatting
-        MESSAGE="<b>🎉 New Release Available!</b> 🚀\n\n"
-        MESSAGE+="━━━━━━━━━━━━━━━━━━━━━━━\n\n"
-        MESSAGE+="📱 <b>App Name:</b> Seal Plus\n\n"
-        MESSAGE+="🏷️ <b>Version:</b> v${{ steps.version.outputs.VERSION }}\n\n"
-        MESSAGE+="━━━━━━━━━━━━━━━━━━━━━━━\n\n"
-        MESSAGE+="📋 <b>Changelog (v2.4):</b>\n\n"
-        MESSAGE+="<b>✨ Animated Branding & Visual Polish</b>\n"
-        MESSAGE+="  ➤ Animated Glowing \"+\" with flowing gradient on Seal+ branding\n"
-        MESSAGE+="  ➤ Premium Gradient Spinner in download dialog\n\n"
-        MESSAGE+="<b>🎨 UI & Theme Enhancements</b>\n"
-        MESSAGE+="  ➤ Typewriter URL placeholder animation with gradient text\n"
-        MESSAGE+="  ➤ Redesigned Navigation Drawer with logo and version badge\n"
-        MESSAGE+="  ➤ Dark Theme ON by default for new installations\n\n"
-        MESSAGE+="<b>🎯 Consistent Icon Theming</b>\n"
-        MESSAGE+="  ➤ 30+ screens refactored to use MaterialTheme colors\n"
-        MESSAGE+="  ➤ Consistent across Light, Dark, and Gradient Dark themes\n\n"
-        MESSAGE+="<b>🍞 Themed Toast System</b>\n"
-        MESSAGE+="  ➤ Custom branded toasts matching Material 3 color scheme\n\n"
-        MESSAGE+="<b>🔗 Share Intent & Navigation</b>\n"
-        MESSAGE+="  ➤ URLs shared from other apps auto-fill in download input\n"
-        MESSAGE+="  ➤ Sponsor page redirects to Support Developer page\n\n"
-        MESSAGE+="━━━━━━━━━━━━━━━━━━━━━━━\n\n"
-        MESSAGE+="✨ <b>Key Features (v2.4):</b>\n"
-        MESSAGE+="✨ Animated Glowing \"+\" with flowing gradient\n"
-        MESSAGE+="🎨 Typewriter URL placeholder animation\n"
-        MESSAGE+="🔄 Premium Gradient Spinner\n"
-        MESSAGE+="🧭 Redesigned Nav Drawer with logo\n"
-        MESSAGE+="🎯 30+ Icon Theme Refactor\n"
-        MESSAGE+="🍞 Themed Toast System\n"
-        MESSAGE+="🔗 Share Intent URL pre-fill\n"
-        MESSAGE+="🌙 Dark Theme default for new users\n"
-        MESSAGE+="⏯️ Pause/Resume downloads with queue\n"
-        MESSAGE+="🌐 Download from 1000+ sites via yt-dlp\n\n"
-        MESSAGE+="━━━━━━━━━━━━━━━━━━━━━━━\n\n"
-        MESSAGE+="📦 <b>Available APKs:</b>\n"
-        MESSAGE+="  ➤ Universal (All devices)\n"
-        MESSAGE+="  ➤ arm64-v8a (Modern phones)\n"
-        MESSAGE+="  ➤ armeabi-v7a (Older phones)\n"
-        MESSAGE+="  ➤ x86_64 / x86 (Tablets)\n\n"
-        MESSAGE+="━━━━━━━━━━━━━━━━━━━━━━━\n\n"
-        MESSAGE+="🔗 <b>Download Now:</b>\n"
-        MESSAGE+="<a href=\"${RELEASE_URL}\">Click here to download v${{ steps.version.outputs.VERSION }}</a>\n\n"
-        MESSAGE+="━━━━━━━━━━━━━━━━━━━━━━━\n\n"
-        MESSAGE+="💡 <b>Note:</b> v2.4 brings premium animated branding with glowing gradient \"+\", typewriter URL placeholder, gradient spinner, redesigned navigation drawer, 30+ icon theme refactor, branded toast system, share intent URL pre-fill, and dark theme by default. More polished and premium than ever!\n\n"
-        MESSAGE+="🕐 <i>Released: $(date '+%B %d, %Y at %H:%M UTC')</i>"
-        
-        # URL encode the message to avoid HTML parsing issues
-        MESSAGE_ENCODED=$(echo -ne "$MESSAGE" | jq -sRr @uri)
-        
-        # Send ONLY to Channel
-        curl -s -X POST "https://api.telegram.org/bot${TGTOKEN}/sendMessage" \
-          -d "chat_id=${TGCHANNEL}" \
-          -d "text=${MESSAGE_ENCODED}" \
-          -d "parse_mode=HTML" \
-          -d "disable_web_page_preview=false" \
-          && echo "? Telegram Channel notification sent successfully!" \
-          || echo "? Failed to send Telegram notification"
-
-    - name: Upload Universal APK as Artifact
-      if: steps.release_config.outputs.SHOULD_RELEASE == 'false'
-      uses: actions/upload-artifact@v4
-      with:
-        name: SealPlus-${{ steps.version.outputs.VERSION }}-universal
-        path: app/build/outputs/apk/generic/release/*universal*.apk
-        if-no-files-found: warn
-        retention-days: 30
-
-    - name: Upload arm64-v8a APK as Artifact
-      if: steps.release_config.outputs.SHOULD_RELEASE == 'false'
-      uses: actions/upload-artifact@v4
-      with:
-        name: SealPlus-${{ steps.version.outputs.VERSION }}-arm64-v8a
-        path: app/build/outputs/apk/generic/release/*arm64-v8a*.apk
-        if-no-files-found: warn
-        retention-days: 30
-
-    - name: Upload armeabi-v7a APK as Artifact
-      if: steps.release_config.outputs.SHOULD_RELEASE == 'false'
-      uses: actions/upload-artifact@v4
-      with:
-        name: SealPlus-${{ steps.version.outputs.VERSION }}-armeabi-v7a
-        path: app/build/outputs/apk/generic/release/*armeabi-v7a*.apk
-        if-no-files-found: warn
-        retention-days: 30
-
-    - name: Upload x86_64 APK as Artifact
-      if: steps.release_config.outputs.SHOULD_RELEASE == 'false'
-      uses: actions/upload-artifact@v4
-      with:
-        name: SealPlus-${{ steps.version.outputs.VERSION }}-x86_64
-        path: app/build/outputs/apk/generic/release/*x86_64*.apk
-        if-no-files-found: warn
-        retention-days: 30
-
-    - name: Upload x86 APK as Artifact
-      if: steps.release_config.outputs.SHOULD_RELEASE == 'false'
-      uses: actions/upload-artifact@v4
-      with:
-        name: SealPlus-${{ steps.version.outputs.VERSION }}-x86
-        path: app/build/outputs/apk/generic/release/*x86*.apk
-        if-no-files-found: warn
-        retention-days: 30
-
-    - name: Upload Artifacts (Backup - Always)
-      if: steps.release_config.outputs.SHOULD_RELEASE == 'true'
-      uses: actions/upload-artifact@v4
-      with:
-        name: signed-apks-backup
-        path: app/build/outputs/apk/generic/release/*.apk
-        if-no-files-found: error
-        retention-days: 20
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: X-Down-Final-APK
+          path: app/build/outputs/apk/debug/*.apk
