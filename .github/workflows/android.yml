@@ -1,3 +1,4 @@
+
 name: Build X-Down APK
 
 on:
@@ -10,10 +11,10 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Set up JDK 21
+      - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
-          java-version: '21'
+          java-version: '17'
           distribution: 'temurin'
           cache: 'gradle'
 
@@ -22,14 +23,15 @@ jobs:
           # Nomlarni o'zgartirish
           find . -name "strings.xml" -type f -exec sed -i 's/Seal Plus/X-Down/g' {} +
           find . -name "strings.xml" -type f -exec sed -i 's/Seal/X-Down/g' {} +
-          # Paketni o'zgartirish
-          find . -name "build.gradle*" -type f -exec sed -i 's/com.junkfood.seal/com.shaxzod.xdown/g' {} +
+          # Paket nomini barcha joyda o'zgartirish
+          grep -rl "com.junkfood.seal" . | xargs sed -i 's/com.junkfood.seal/com.shaxzod.xdown/g' || true
+          grep -rl "com.mahesh.sealplus" . | xargs sed -i 's/com.mahesh.sealplus/com.shaxzod.xdown/g' || true
 
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
       - name: Clean and Build APK
-        run: ./gradlew clean assembleDebug --stacktrace
+        run: ./gradlew clean assembleDebug --no-daemon --stacktrace
 
       - name: Upload Final APK
         uses: actions/upload-artifact@v4
